@@ -8,12 +8,10 @@ const styles = stylex.create({
 });
 
 
-export default function Home() {
+export default function Resources() {
   return (
     <div {...stylex.props(styles.page)}>
-      <h1 >
-      Wisdom Weaver Coaching
-      </h1>
+      <h1 >Additional Resources</h1>
     </div>
   )
 }

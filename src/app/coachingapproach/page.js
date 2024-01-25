@@ -8,12 +8,10 @@ const styles = stylex.create({
 });
 
 
-export default function Home() {
+export default function CoachingApproach() {
   return (
     <div {...stylex.props(styles.page)}>
-      <h1 >
-      Wisdom Weaver Coaching
-      </h1>
+      <h1 >CoachingApprocah</h1>
     </div>
   )
 }
