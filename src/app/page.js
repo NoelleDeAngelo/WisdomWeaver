@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import Nav from '../components/Nav.js'
 
 const styles = stylex.create({
   page: {
@@ -11,9 +12,7 @@ const styles = stylex.create({
 export default function Home() {
   return (
     <div {...stylex.props(styles.page)}>
-      <h1 >
-      Wisdom Weaver Coaching
-      </h1>
+      <h1 >Wisdom Weaver Coaching</h1>
     </div>
   )
 }

@@ -8,11 +8,12 @@ const styles = stylex.create({
 });
 
 
-export default function About() {
+export default function Nav() {
   return (
     <div {...stylex.props(styles.page)}>
-      
-      <h1 >About</h1>
+      <h1 >
+      Nav
+      </h1>
     </div>
   )
 }
