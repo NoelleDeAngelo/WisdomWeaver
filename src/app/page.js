@@ -1,10 +1,15 @@
 import * as stylex from '@stylexjs/stylex';
 import Nav from '../components/Nav.js'
+import {colors,spacing} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
-    background: '#28595A',
-    color: '#f37353',
+    background:colors.white,
+    color: 'black',
+    padding: 0,
+    margin:0,
+    height: '87vh',
+
   },
 });
 
@@ -12,7 +17,7 @@ const styles = stylex.create({
 export default function Home() {
   return (
     <div {...stylex.props(styles.page)}>
-      <h1 >Wisdom Weaver Coaching</h1>
+      <div >Home</div>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import * as stylex from '@stylexjs/stylex';
+import {colors,spacing} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
-    background: '#28595A',
-    color: '#f37353',
+    background: colors.white,
+    color: colors.orange,
+    height: '8vh'
   },
 });
 
@@ -11,9 +13,7 @@ const styles = stylex.create({
 export default function Footer() {
   return (
     <div {...stylex.props(styles.page)}>
-      <h1 >
-      Footer
-      </h1>
+     <div>Footer</div>
     </div>
   )
 }
