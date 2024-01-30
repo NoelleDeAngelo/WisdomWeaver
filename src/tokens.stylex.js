@@ -21,3 +21,7 @@ export const spacing = stylex.defineVars({
   xxlarge: '48px',
   xxxlarge: '96px',
 });
+
+export const fonts = stylex.defineVars({
+  brand: 'sans-serif',
+});
