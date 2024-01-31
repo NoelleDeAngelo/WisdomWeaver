@@ -1,5 +1,6 @@
 import * as stylex from '@stylexjs/stylex';
 import {colors,spacing,fonts} from '../tokens.stylex';
+import Link from 'next/link'
 
 
 const styles = stylex.create({
@@ -15,9 +16,13 @@ const styles = stylex.create({
   },
   brandName: {
     fontFamily: fonts.brand,
+    fontSize: '1.2rem',
+    margin: spacing.medium,
   },
   link: {
-    listStyle: 'none'
+    textDecoration:'none',
+    padding: spacing.small,
+    color: colors.white,
   },
 });
 
@@ -27,16 +32,13 @@ export default function Nav() {
     <div {...stylex.props(styles.navBar)}>
       <div {...stylex.props(styles.brandName)}>Wisdom Weaver Coaching</div>
       <div>
-        <ul>
-          <li {...stylex.props(styles.link)}>Home</li>
-          <li {...stylex.props(styles.link)}>Approach</li>
-          <li {...stylex.props(styles.link)}>About</li>
-          <li {...stylex.props(styles.link)}>Blog</li>
-          <li {...stylex.props(styles.link)}>Contact Us</li>
-          <li {...stylex.props(styles.link)}>Our Services</li>
-          <li {...stylex.props(styles.link)}>Additional Resources</li>
-
-        </ul>
+      <Link href='/' {...stylex.props(styles.link)}>Home</Link>
+      <Link href='/coachingapproach' {...stylex.props(styles.link)}>Approach</Link>
+      <Link href='/about' {...stylex.props(styles.link)}>About</Link>
+      <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link>
+      <Link href='/contactus' {...stylex.props(styles.link)}>Contact Us</Link>
+      <Link href='/services' {...stylex.props(styles.link)}>Our Services</Link>
+      <Link href='/resources' {...stylex.props(styles.link)}>Additional Resources</Link>
       </div>
     </div>
   )
