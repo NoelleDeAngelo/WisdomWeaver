@@ -4,9 +4,10 @@ module.exports = {
     [
       '@stylexjs/babel-plugin',
       {
-        dev: false,
-        stylexSheetName: '<>',
+        dev: process.env.NODE_ENV === 'development',
+        runtimeInjection: false,
         genConditionalClasses: true,
+        treeshakeCompensation: true,
         unstable_moduleResolution: {
           type: 'commonJS',
           rootDir: __dirname,
