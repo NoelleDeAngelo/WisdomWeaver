@@ -12,17 +12,27 @@ const styles = stylex.create({
     height: '5vh',
     display: 'flex',
     alignItems: 'center',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    minHeight: '40px',
   },
   brandName: {
     fontFamily: fonts.brand,
     fontSize: '1.2rem',
     margin: spacing.medium,
   },
+  linkList: {
+    display: 'flex',
+    height:'100%',
+  },
   link: {
+    alignItems: 'center',
     textDecoration:'none',
-    padding: spacing.small,
+    padding:spacing.medium,
     color: colors.white,
+    backgroundColor: {
+      default: colors.darkTeal,
+      ':hover': colors.lightTeal,
+    },
   },
 });
 
@@ -31,7 +41,7 @@ export default function Nav() {
   return (
     <div {...stylex.props(styles.navBar)}>
       <div {...stylex.props(styles.brandName)}>Wisdom Weaver Coaching</div>
-      <div>
+      <div {...stylex.props(styles.linkList)}>
       <Link href='/' {...stylex.props(styles.link)}>Home</Link>
       <Link href='/coachingapproach' {...stylex.props(styles.link)}>Approach</Link>
       <Link href='/about' {...stylex.props(styles.link)}>About</Link>
