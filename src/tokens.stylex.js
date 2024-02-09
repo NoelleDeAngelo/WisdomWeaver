@@ -1,6 +1,7 @@
 import * as stylex from '@stylexjs/stylex';
 
 
+
 export const colors = stylex.defineVars({
   orange: {default:'#f37353'},
   darkTeal: {default:'#28595A'},
@@ -10,13 +11,15 @@ export const colors = stylex.defineVars({
   brown: {default:'#554741'},
   white: {default:'#fcf5ed'},
   background:{default:'#feefe8'},
-  button: {default:'#078080'},
+  buttonBackground: {default:'#f45d48'},
   buttonText:{default:'#232323'},
   headline: {default:'#232323'},
   paragraph:{default:'#222525'},
-  hilight:{default:'#089c9c'},
-  link:{default:'#f45d48'}
-
+  navHilight:{default:'#f37353'},
+  link:{default:'#f45d48'},
+  navBackround:{default:'#078080'},
+  navText:{default:'#232323'},
+  cardBackground:{default:'#fffffe'},
 });
 
 export const spacing = stylex.defineVars({
@@ -31,5 +34,6 @@ export const spacing = stylex.defineVars({
 });
 
 export const fonts = stylex.defineVars({
-  brand: 'sans-serif',
+  brand: 'Lora',
+  text: 'Lato',
 });

@@ -7,8 +7,8 @@ let menuOpen= false;
 
 const styles = stylex.create({
   navBar: {
-    background: colors.button,
-    color: colors.buttonText,
+    background: colors.navBackround,
+    color: colors.navText,
     padding:0,
     margin:0,
     height: '5vh',
@@ -33,10 +33,11 @@ const styles = stylex.create({
     alignItems: 'center',
     textDecoration:'none',
     padding:spacing.medium,
-    color: colors.buttonText,
+    fontFamily: fonts.text,
+    color: colors.navText,
     backgroundColor: {
-      default: colors.button,
-      ':hover': colors.hilight,
+      default: colors.navBackround,
+      ':hover': colors.navHilight,
     },
   },
   menu: {
