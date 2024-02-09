@@ -3,7 +3,7 @@ import {colors,spacing} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
-    background: colors.white,
+    background: colors.background,
     color: colors.orange,
     height: '8vh'
   },

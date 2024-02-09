@@ -9,6 +9,14 @@ export const colors = stylex.defineVars({
   green: {default:'#55685c'},
   brown: {default:'#554741'},
   white: {default:'#fcf5ed'},
+  background:{default:'#feefe8'},
+  button: {default:'#078080'},
+  buttonText:{default:'#232323'},
+  headline: {default:'#232323'},
+  paragraph:{default:'#222525'},
+  hilight:{default:'#089c9c'},
+  link:{default:'#f45d48'}
+
 });
 
 export const spacing = stylex.defineVars({

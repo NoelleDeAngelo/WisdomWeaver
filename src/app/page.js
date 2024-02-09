@@ -4,7 +4,7 @@ import {colors,spacing} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
-    background:colors.white,
+    background:colors.background,
     color: 'black',
     padding: 0,
     margin:0,
