@@ -1,11 +1,12 @@
 import * as stylex from '@stylexjs/stylex';
 import Nav from '../components/Nav.js'
-import {colors,spacing} from '../tokens.stylex';
+import {colors,spacing,fonts} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
     background:colors.background,
-    color: 'black',
+    color: colors.headline,
+    fontFamily: fonts.text,
     padding: 0,
     margin:0,
     height: '87vh',

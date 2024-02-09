@@ -16,6 +16,7 @@ const styles = stylex.create({
     alignItems: 'center',
     justifyContent:'space-between',
     minHeight: '40px',
+    boxShadow: '0 2px 4px 0 rgba(0,0,0,.25)',
   },
   brandName: {
     fontFamily: fonts.brand,

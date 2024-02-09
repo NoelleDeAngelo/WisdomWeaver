@@ -1,10 +1,11 @@
 import * as stylex from '@stylexjs/stylex';
-import {colors,spacing} from '../tokens.stylex';
+import {colors,spacing,fonts} from '../tokens.stylex';
 
 const styles = stylex.create({
   page: {
     background: colors.background,
-    color: colors.orange,
+    fontFamily: fonts.text,
+    color: colors.link,
     height: '8vh'
   },
 });
