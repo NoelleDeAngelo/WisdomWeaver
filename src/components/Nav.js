@@ -3,7 +3,6 @@ import {colors,spacing,fonts} from '../tokens.stylex';
 import Link from 'next/link';
 import HamburgerMenu from './HamburgerMenu.js'
 
-let menuOpen= false;
 
 const styles = stylex.create({
   navBar: {
@@ -25,10 +24,11 @@ const styles = stylex.create({
   },
   linkList: {
     display: {
-      default:'flex',
-      '@media (max-width: 1000px)': 'none',
+      '@media (width <= 1000px)': 'none',
+      '@media (width > 1000px)': 'flex',
     },
     height:'100%',
+
   },
   link: {
     alignItems: 'center',
@@ -41,15 +41,6 @@ const styles = stylex.create({
       ':hover': colors.navHilight,
     },
   },
-  menu: {
-    display: {
-      default:'none',
-      '@media (max-width: 1000px)': 'flex',
-    },
-    position: 'absolute',
-    right:'1rem',
-    fontSize: '35px'
-  },
 });
 
 
@@ -57,7 +48,7 @@ export default function Nav() {
   return (
     <div {...stylex.props(styles.navBar)}>
       <div {...stylex.props(styles.brandName)}>Wisdom Weaver Coaching</div>
-      <HamburgerMenu menuOpen= {menuOpen}/>
+      <HamburgerMenu />
       <div {...stylex.props(styles.linkList)}>
       <Link href='/' {...stylex.props(styles.link)}>Home</Link>
       <Link href='/coachingapproach' {...stylex.props(styles.link)}>Approach</Link>
