@@ -3,7 +3,7 @@ import * as stylex from '@stylexjs/stylex';
 import {colors,spacing,fonts } from '../tokens.stylex';
 import { TiThMenu } from "react-icons/ti";
 import Link from 'next/link';
-import {useState}from 'react';
+import {useState, useEffect}from 'react';
 
 
 
@@ -48,7 +48,15 @@ const styles = stylex.create({
 
 
 export default function HamburgerMenu() {
-  var [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 1001px)")
+    .addEventListener('change', e => setMenuOpen(false ));
+  }, []);
+
   return (
     <div {...stylex.props(styles.menu)}>
       <TiThMenu onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.menuIcon)} />
@@ -64,4 +72,4 @@ export default function HamburgerMenu() {
     </div>
 
   )
-}
+};
