@@ -15,12 +15,12 @@ const styles = stylex.create({
     alignItems: 'center',
     justifyContent:'space-between',
     minHeight: '40px',
-    boxShadow: '0 2px 4px 0 rgba(0,0,0,.25)',
   },
   brandName: {
     fontFamily: fonts.brand,
-    fontSize: '1.2rem',
+    fontSize: '1.4rem',
     margin: spacing.medium,
+    fontStyle: 'italic',
   },
   linkList: {
     display: {
@@ -28,17 +28,21 @@ const styles = stylex.create({
       '@media (width > 1000px)': 'flex',
     },
     height:'100%',
+    alignItems:'center'
 
   },
   link: {
     alignItems: 'center',
     textDecoration:'none',
-    padding:spacing.medium,
+    padding:'0px 20px',
     fontFamily: fonts.text,
-    color: colors.navText,
+    fontSize: '1.1rem',
     backgroundColor: {
       default: colors.navBackround,
-      ':hover': colors.navHilight,
+    },
+    color: {
+      default: '#f45d48',
+      ':hover': colors.linkHighlight,
     },
   },
 });

@@ -24,7 +24,7 @@ const styles = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute',
-    right:'5px',
+    right:'15px',
   },
   hamLink: {
     alignItems: 'center',

@@ -9,11 +9,12 @@ export const colors = stylex.defineVars({
   buttonText:{default:'#232323'},
   headline: {default:'#232323'},
   paragraph:{default:'#222525'},
-  navHilight:{default:'#f37353'},
+  navHilight:{default:'#fffaf7'},
   link:{default:'#f45d48'},
+  linkHighlight:{default:'#078080'},
   accentLink:{default:'##078080'},
-  navBackround:{default:'#078080'},
-  navText:{default:'#232323'},
+  navBackround:{default:'#feefe8'},
+  navText:{default:'#f45d48'},
   cardBackground:{default:'#fffffe'},
 });
 

@@ -8,7 +8,7 @@ const styles = stylex.create({
     display:'flex',
     justifyContent: 'space-between',
     alignItems:'center',
-    background: colors.accentBackgroundbackground,
+    background: colors.cardBackground,
     fontFamily: fonts.text,
     color: colors.link,
     height: '20vh',
