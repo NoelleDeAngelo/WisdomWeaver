@@ -3,20 +3,15 @@ import * as stylex from '@stylexjs/stylex';
 
 
 export const colors = stylex.defineVars({
-  orange: {default:'#f37353'},
-  darkTeal: {default:'#28595A'},
-  lightTeal: {default:'#25726D'},
-  tan: {default:'#EDD7BF'},
-  green: {default:'#55685c'},
-  brown: {default:'#554741'},
-  white: {default:'#fcf5ed'},
   background:{default:'#feefe8'},
+  accentBackground:{default:'#f8f5f2'},
   buttonBackground: {default:'#f45d48'},
   buttonText:{default:'#232323'},
   headline: {default:'#232323'},
   paragraph:{default:'#222525'},
   navHilight:{default:'#f37353'},
   link:{default:'#f45d48'},
+  accentLink:{default:'##078080'},
   navBackround:{default:'#078080'},
   navText:{default:'#232323'},
   cardBackground:{default:'#fffffe'},
