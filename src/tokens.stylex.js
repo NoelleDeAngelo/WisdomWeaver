@@ -7,7 +7,7 @@ export const colors = stylex.defineVars({
   accentBackground:{default:'#f8f5f2'},
   buttonBackground: {default:'#f45d48'},
   buttonText:{default:'#232323'},
-  headline: {default:'#232323'},
+  headline: {default:'#f45d48'},
   paragraph:{default:'#222525'},
   navHilight:{default:'#fffaf7'},
   link:{default:'#f45d48'},
