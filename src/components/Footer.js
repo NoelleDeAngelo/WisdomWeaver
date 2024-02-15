@@ -54,7 +54,7 @@ export default function Footer() {
         <div {...stylex.props(styles.logo)}>Wisdom Weaver Coaching</div>
         <span {...stylex.props(styles.tagline)}>Catch your dreams</span>
       </div>
-      <div {...stylex.props(styles.newsletter)}>Receive more helpful insights to your Inbox
+      <div {...stylex.props(styles.newsletter)}>Receive more helpful insights to your inbox
         <form>
           <input type= 'text'></input>
           <button>Subscribe</button>
