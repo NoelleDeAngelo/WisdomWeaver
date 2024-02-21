@@ -19,8 +19,13 @@ const styles = stylex.create({
     alignItems: 'center',
     flexDirection: 'column',
     height: '40vh',
+    minHeight: '275px',
     justifyContent:'center',
-    padding: '0vw 30vw',
+    padding:{
+    default:'10vh 25vw',
+    '@media (width <= 700px)':'10vh 10vw',
+  },
+    minWidth: '200px',
   },
   header:{
     fontWeight:'300',
@@ -28,9 +33,12 @@ const styles = stylex.create({
   },
 
 link:{
-  padding:'5vh',
+  padding:'5vh 0vh',
   color: colors.link,
-  fontSize: '1.3.rem',
+  fontSize: {
+    default:'1.3rem',
+    '@media (width <= 750px)':'1.2rem',
+  },
   fontStyle: 'italic',
   fontWeight:'300'
 
