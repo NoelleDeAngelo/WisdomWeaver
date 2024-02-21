@@ -22,18 +22,40 @@ const styles = stylex.create({
   logo:{
     fontFamily: fonts.brand,
     fontStyle: 'italic',
+    fontSize:{
+      default:'1.8rem',
+      '@media (980px < width <= 1200px )':'1.4rem',
+      '@media (800px < width <= 980px )':'1.2rem',
+      '@media (width <= 800px)':'1rem',
+    },
   },
   tagline:{
-    fontSize:'1rem',
     fontFamily: fonts.text,
-    alignSelf:'center'
+    alignSelf:'center',
+    fontSize:{
+      default:'1.4rem',
+      '@media (980px < width <= 1200px )':'1.2rem',
+      '@media (800px < width <= 980px )':'1rem',
+      '@media (width <= 800px)':'.8rem',
+    },
   },
   newsletter:{
-
+    textAlign: 'center',
+    fontSize:{
+      default:'1.4rem',
+      '@media (980px < width <= 1200px )':'1.2rem',
+      '@media (800px < width <= 980px )':'1rem',
+      '@media (width <= 800px)':'.8rem',
+    },
   },
   followUs:{
     padding: '0px 5vw',
-    fontSize:'1.4rem'
+    fontSize:{
+      default:'1.4rem',
+      '@media (980px < width <= 1200px )':'1.2rem',
+      '@media (width <= 980px )':'1rem',
+    },
+    textAlign: 'center',
   },
   socialIconList:{
     margin: '5px 0px',

@@ -18,7 +18,11 @@ const styles = stylex.create({
   },
   brandName: {
     fontFamily: fonts.brand,
-    fontSize: '1.4rem',
+    fontSize: {
+      default:'1.4rem',
+      '@media (310px < width <= 350px )':'1.2rem',
+      '@media (width <= 310px)':'1rem',
+    },
     margin: spacing.medium,
     fontStyle: 'italic',
   },
@@ -34,7 +38,7 @@ const styles = stylex.create({
   link: {
     alignItems: 'center',
     textDecoration:'none',
-    padding:'0px 20px',
+    padding:'0vw .5vw',
     fontFamily: fonts.text,
     fontSize: '1.1rem',
     backgroundColor: {
