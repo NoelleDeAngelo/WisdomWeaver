@@ -7,14 +7,14 @@ export const colors = stylex.defineVars({
   accentBackground:{default:'#f8f5f2'},
   buttonBackground: {default:'#f45d48'},
   buttonText:{default:'#232323'},
-  headline: {default:'#f45d48'},
+  headline: {default:'#f8f5f2'},
   paragraph:{default:'#222525'},
-  navHilight:{default:'#fffaf7'},
+  navHighlight:{default:'#dedede'},
   link:{default:'#f45d48'},
   linkHighlight:{default:'#078080'},
   accentLink:{default:'##078080'},
   navBackround:{default:'#feefe8'},
-  navText:{default:'#f45d48'},
+  navText:{default:'#f8f5f2'},
   cardBackground:{default:'#fffffe'},
 });
 

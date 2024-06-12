@@ -31,10 +31,13 @@ const styles = stylex.create({
     textDecoration:'none',
     padding:spacing.medium,
     fontFamily: fonts.text,
-    color: colors.navText,
+    color:
+      {
+        default: '#f45d48',
+        ':hover':colors.navHighlight,
+      },
     backgroundColor: {
       default: colors.navBackround,
-      ':hover': colors.navHilight,
     },
     boxShadow: '0 2px 4px 0 rgba(0,0,0,.25)',
   },
@@ -67,7 +70,7 @@ export default function HamburgerMenu() {
         <Link href='/blog' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Blog</Link>
         <Link href='/contactus' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Contact Us</Link>
         <Link href='/services' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Our Services</Link>
-        <Link href='/resources' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Additional Resources</Link>
+        <Link href='/resources' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Resources</Link>
       </div>
     </div>
 

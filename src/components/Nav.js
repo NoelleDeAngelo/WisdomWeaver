@@ -6,7 +6,10 @@ import HamburgerMenu from './HamburgerMenu.js'
 
 const styles = stylex.create({
   navBar: {
-    background: colors.navBackround,
+    //background: colors.navBackround,
+    width:'100%',
+    position:'absolute',
+    zIndex:'1000',
     color: colors.navText,
     padding:0,
     margin:0,
@@ -15,6 +18,7 @@ const styles = stylex.create({
     alignItems: 'center',
     justifyContent:'space-between',
     minHeight: '40px',
+
   },
   brandName: {
     fontFamily: fonts.brand,
@@ -41,12 +45,12 @@ const styles = stylex.create({
     padding:'0vw .5vw',
     fontFamily: fonts.text,
     fontSize: '1.1rem',
-    backgroundColor: {
-      default: colors.navBackround,
-    },
+    // backgroundColor: {
+    //   default: colors.navBackround,
+    // },
     color: {
-      default: '#f45d48',
-      ':hover': colors.linkHighlight,
+      default: '#f8f5f2',
+      ':hover': colors.navHighlight,
     },
   },
 });
@@ -64,7 +68,7 @@ export default function Nav() {
       <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link>
       <Link href='/contactus' {...stylex.props(styles.link)}>Contact Us</Link>
       <Link href='/services' {...stylex.props(styles.link)}>Our Services</Link>
-      <Link href='/resources' {...stylex.props(styles.link)}>Additional Resources</Link>
+      <Link href='/resources' {...stylex.props(styles.link)}>Resources</Link>
       </div>
     </div>
   )
