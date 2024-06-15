@@ -64,7 +64,7 @@ const styles = stylex.create({
 
   },
   socialIcon:{
-
+    color:colors.link,
   }
 });
 
@@ -84,9 +84,9 @@ export default function Footer() {
       </div>
       <div {...stylex.props(styles.followUs)}>Follow Us
         <div {...stylex.props(styles.socialIconList)}>
-          <FaFacebook {...stylex.props(styles.socialIcon)}/>
-          <FaInstagram {...stylex.props(styles.socialIcon)}/>
-          <FaXTwitter {...stylex.props(styles.socialIcon)}/>
+          <a href='https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg'><FaFacebook {...stylex.props(styles.socialIcon)}/></a>
+          <a href='https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw=='><FaInstagram {...stylex.props(styles.socialIcon)}/></a>
+          {/* <FaXTwitter {...stylex.props(styles.socialIcon)}/> */}
         </div>
       </div>
 
