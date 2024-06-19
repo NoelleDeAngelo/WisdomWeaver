@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.8",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@stylexjs/babel-plugin": "^0.4.1",
     "@stylexjs/nextjs-plugin": "^0.4.1",
     "@stylexjs/stylex": "^0.4.1",
