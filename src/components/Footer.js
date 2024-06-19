@@ -1,7 +1,8 @@
-import * as stylex from '@stylexjs/stylex';
-import {colors,spacing,fonts} from '../tokens.stylex';
+import * as stylex from "@stylexjs/stylex";
+import {colors,spacing,fonts} from "../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import NewsletterForm from "./newsletterForm.js"
 
 const styles = stylex.create({
   footer: {
@@ -70,6 +71,12 @@ const styles = stylex.create({
 
 
 export default function Footer() {
+  // const handleSubmit= async (e)=> {
+  //   'use server'
+  //   e.preventDefault();
+  //   console.log('in here');
+  // }
+
   return (
     <div {...stylex.props(styles.footer)}>
       <div {...stylex.props(styles.logoContainer)}>
@@ -77,10 +84,11 @@ export default function Footer() {
         <span {...stylex.props(styles.tagline)}>Catch your dreams</span>
       </div>
       <div {...stylex.props(styles.newsletter)}>Receive more helpful insights to your inbox
-        <form>
-          <input type= 'text'></input>
+        {/* <form onSubmit={handleSubmit}>
+          <input type= 'email' required></input>
           <button>Subscribe</button>
-        </form>
+        </form> */}
+        <NewsletterForm/>
       </div>
       <div {...stylex.props(styles.followUs)}>Follow Us
         <div {...stylex.props(styles.socialIconList)}>
