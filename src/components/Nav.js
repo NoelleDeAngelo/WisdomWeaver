@@ -6,7 +6,6 @@ import HamburgerMenu from './HamburgerMenu.js';
 
 const styles = stylex.create({
   navBar: {
-    //background: colors.navBackround,
     width:'100%',
     position:'absolute',
     zIndex:'1000',
@@ -36,8 +35,8 @@ const styles = stylex.create({
       '@media (width > 1000px)': 'flex',
     },
     height:'100%',
-    alignItems:'center'
-
+    alignItems:'center',
+    marginRight:'15px',
   },
   link: {
     alignItems: 'center',
@@ -45,9 +44,6 @@ const styles = stylex.create({
     padding:'0vw .5vw',
     fontFamily: fonts.text,
     fontSize: '1.1rem',
-    // backgroundColor: {
-    //   default: colors.navBackround,
-    // },
     color: {
       default: '#f8f5f2',
       ':hover': colors.navHighlight,

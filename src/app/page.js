@@ -58,6 +58,7 @@ const styles = stylex.create({
   section:{
     background: colors.accentBackground,
     color: colors.paragraph,
+    height:'50vh'
   },
 
 });

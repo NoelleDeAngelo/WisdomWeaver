@@ -2,17 +2,21 @@ import * as stylex from "@stylexjs/stylex";
 import {colors,spacing,fonts} from "../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import NewsletterForm from "./newsletterForm.js"
+import NewsletterForm from "./NewsletterForm.js"
 
 const styles = stylex.create({
   footer: {
     display:'flex',
+    flexDirection:{
+      default:'row',
+      '@media (width <= 500px)':'column',
+    },
     justifyContent: 'space-between',
     alignItems:'center',
     background: colors.cardBackground,
     fontFamily: fonts.text,
     color: colors.link,
-    height: '20vh',
+    height: '15vh',
     fontSize:'1.4rem',
   },
   logoContainer:{
@@ -41,12 +45,19 @@ const styles = stylex.create({
     },
   },
   newsletter:{
-    textAlign: 'center',
+    padding: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+
+  },
+  newsletterText:{
+    marginBottom: '10px',
     fontSize:{
       default:'1.4rem',
       '@media (980px < width <= 1200px )':'1.2rem',
       '@media (800px < width <= 980px )':'1rem',
-      '@media (width <= 800px)':'.8rem',
+      '@media (width <= 800px)':'.9rem',
     },
   },
   followUs:{
@@ -71,11 +82,6 @@ const styles = stylex.create({
 
 
 export default function Footer() {
-  // const handleSubmit= async (e)=> {
-  //   'use server'
-  //   e.preventDefault();
-  //   console.log('in here');
-  // }
 
   return (
     <div {...stylex.props(styles.footer)}>
@@ -83,11 +89,7 @@ export default function Footer() {
         <div {...stylex.props(styles.logo)}>Wisdom Weaver Coaching</div>
         <span {...stylex.props(styles.tagline)}>Catch your dreams</span>
       </div>
-      <div {...stylex.props(styles.newsletter)}>Receive more helpful insights to your inbox
-        {/* <form onSubmit={handleSubmit}>
-          <input type= 'email' required></input>
-          <button>Subscribe</button>
-        </form> */}
+      <div {...stylex.props(styles.newsletter)}><p {...stylex.props(styles.newsletterText)}>Receive more helpful insights to your inbox</p>
         <NewsletterForm/>
       </div>
       <div {...stylex.props(styles.followUs)}>Follow Us
