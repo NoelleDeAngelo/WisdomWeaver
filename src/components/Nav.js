@@ -22,12 +22,12 @@ const styles = stylex.create({
   brandName: {
     fontFamily: fonts.brand,
     fontSize: {
-      default:'1.4rem',
+      default:'1.8rem',
       '@media (310px < width <= 350px )':'1.2rem',
       '@media (width <= 310px)':'1rem',
     },
     margin: spacing.medium,
-    fontStyle: 'italic',
+    letterSpacing:'.7px'
   },
   linkList: {
     display: {

@@ -8,7 +8,9 @@ const styles = stylex.create({
   form:{
   },
   input:{
-    border: '2px solid #5fc6c6',
+    background:colors.darkBackground,
+    border: '2px solid',
+    //borderColor: colors.darkButton,
     borderRadius:'5px',
     padding: '10px',
     fontSize: '16px',
@@ -28,9 +30,9 @@ const styles = stylex.create({
     },
   },
   button:{
-    backgroundColor: '#008080',
+    backgroundColor: colors.darkButton,
     borderRadius:'5px',
-    color: '#FFFFFF',
+    color: colors.darkText,
     padding: '10px 20px',
     fontSize: '16px',
     border: 'none',

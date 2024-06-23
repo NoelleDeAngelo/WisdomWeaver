@@ -3,19 +3,30 @@ import * as stylex from '@stylexjs/stylex';
 
 
 export const colors = stylex.defineVars({
-  background:{default:'#feefe8'},
-  accentBackground:{default:'#f8f5f2'},
+  //Main//
+  background:{default:'#f8f5f2'},
   buttonBackground: {default:'#f45d48'},
   buttonText:{default:'#232323'},
-  headline: {default:'#f8f5f2'},
-  paragraph:{default:'#222525'},
   navHighlight:{default:'#dedede'},
-  link:{default:'#f45d48'},
-  linkHighlight:{default:'#078080'},
-  accentLink:{default:'##078080'},
-  navBackround:{default:'#feefe8'},
   navText:{default:'#f8f5f2'},
-  cardBackground:{default:'#fffffe'},
+  //Hero Section//
+  heroText:{default:'#ffffff'},
+  //Light Sections//
+  lightBackground:{default:'#f6f0e5'},
+  lightHeading:{default:'b26429'},
+  lightSubheading:{default:'#e2725b'},
+  lightText:{default:'#234649'},
+  lightLink:{default:'#b26429'},
+  lightLinkHighlight:{default:'#078080'},
+  //Dark Sections//
+  darkBackground:{default:'#234649'},
+  darkHeading:{default:'#f6f0e5'},
+  darkSubheading:{default:'#eab5ac'},
+  darkText:{default:'#f8f5f2'},
+  darkLink:{default:'#b26429'},
+  darkLinkHighlight:{default:'#078080'},
+  darkButton:{default:'#e2725b'},
+
 });
 
 export const spacing = stylex.defineVars({
@@ -30,6 +41,7 @@ export const spacing = stylex.defineVars({
 });
 
 export const fonts = stylex.defineVars({
-  brand: 'Lora',
-  text: 'Lato',
+  brand: 'Sacramento, cursive',
+  heading:'Merriweather',
+  text: 'Nunito, sans-serif',
 });

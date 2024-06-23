@@ -6,7 +6,6 @@ import Link from 'next/link';
 const styles = stylex.create({
   home: {
     background:colors.background,
-    color: colors.headline,
     fontFamily: fonts.text,
     padding: 0,
     margin:0,
@@ -16,6 +15,7 @@ const styles = stylex.create({
   },
   hero:{
     display: 'flex',
+    color:colors.heroText,
     alignItems: 'center',
     flexDirection: 'column',
     height: '40vh',
@@ -34,8 +34,9 @@ const styles = stylex.create({
     backgroundSize: 'cover',
     position: 'relative',
   },
-  header:{
-    fontWeight:'800',
+  heroHeader:{
+    fontFamily: fonts.heading,
+    fontWeight:'500',
     letterSpacing: '.6px',
     textAlign: 'center',
     fontSize: {
@@ -44,20 +45,19 @@ const styles = stylex.create({
     },
   },
 
-  link:{
+  heroLink:{
+    color:colors.heroText,
     padding:'5vh 0vh',
-    color: colors.headline,
     fontSize: {
       default:'1.5rem',
       '@media (width <= 750px)':'1.2rem',
     },
-    fontStyle: 'italic',
     fontWeight:'300'
 
 },
-  section:{
-    background: colors.accentBackground,
-    color: colors.paragraph,
+  lightsSection:{
+    background: colors.lightBackground,
+    color: colors.lightText,
     height:'50vh'
   },
 
@@ -70,12 +70,16 @@ export default function Home() {
       <div {...stylex.props(styles.heroImage)} >
         <div {...stylex.props(styles.hero)}>
 
-          <h1 {...stylex.props(styles.header)}>Embark on a Transformative Journey with Our Intuitive Life Coaching</h1>
-          <Link href= 'https://wisdomweavercoaching.youcanbook.me/' {...stylex.props(styles.link)}>Book a Free Consultaion</Link>
+          <h1 {...stylex.props(styles.heroHeader)}>Embark on a Transformative Journey with Our Intuitive Life Coaching</h1>
+          <Link href= 'https://wisdomweavercoaching.youcanbook.me/' {...stylex.props(styles.heroLink)}>Book a Free Consultaion</Link>
         </div>
       </div>
-      <div {...stylex.props(styles.section)}>
-        Accent area
+      <div {...stylex.props(styles.lightsSection)}>
+        <div>
+          <h2>Who We Are</h2>
+          <p></p>
+        </div>
+
       </div>
     </div>
   )

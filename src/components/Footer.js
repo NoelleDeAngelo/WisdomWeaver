@@ -13,9 +13,9 @@ const styles = stylex.create({
     },
     justifyContent: 'space-between',
     alignItems:'center',
-    background: colors.cardBackground,
+    background: colors.darkBackground,
     fontFamily: fonts.text,
-    color: colors.link,
+    color: colors.darkSubheading,
     height: '15vh',
     fontSize:'1.4rem',
   },
@@ -26,9 +26,9 @@ const styles = stylex.create({
   },
   logo:{
     fontFamily: fonts.brand,
-    fontStyle: 'italic',
+    letterSpacing:'.7px',
     fontSize:{
-      default:'1.8rem',
+      default:'1.9rem',
       '@media (980px < width <= 1200px )':'1.4rem',
       '@media (800px < width <= 980px )':'1.2rem',
       '@media (width <= 800px)':'1rem',
@@ -76,7 +76,7 @@ const styles = stylex.create({
 
   },
   socialIcon:{
-    color:colors.link,
+    color:colors.darkSubheading,
   }
 });
 

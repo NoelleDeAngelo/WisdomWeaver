@@ -33,11 +33,11 @@ const styles = stylex.create({
     fontFamily: fonts.text,
     color:
       {
-        default: '#f45d48',
+        default: colors.lightText,
         ':hover':colors.navHighlight,
       },
     backgroundColor: {
-      default: colors.navBackround,
+      default: colors.background,
     },
     boxShadow: '0 2px 4px 0 rgba(0,0,0,.25)',
   },
