@@ -24,7 +24,7 @@ const styles = stylex.create({
     padding:{
     default:'10vh 25vw',
     '@media (width <= 700px)':'10vh 10vw',
-  },
+    },
     minWidth: '200px',
   },
   heroImage:{
@@ -44,7 +44,6 @@ const styles = stylex.create({
       '@media (width <= 750px)':'1.8rem',
     },
   },
-
   heroLink:{
     color:colors.heroText,
     padding:'5vh 0vh',
@@ -53,12 +52,37 @@ const styles = stylex.create({
       '@media (width <= 750px)':'1.2rem',
     },
     fontWeight:'300'
-
-},
-  lightsSection:{
-    background: colors.lightBackground,
+  },
+  aboutSection:{
+    display:'flex',
+    flexFlow:'row wrap',
+    minHeight:'450px',
+  },
+  aboutImageContainer:{
+    display:'flex',
+    flex: '1 0 200px',
+    alignItems:'center',
+    justifyContent:'center',
+  },
+  about:{
+    display:'flex',
+    flexDirection:'column',
+    background:'white',
+    flex: '3 0 600px',
+    justifyContent:'center',
+  },
+  aboutHeading:{
+    color: colors.lightHeading,
+    marginLeft:'22%',
+    marginBottom:'0',
+    justifySelf:'flex-start',
+  },
+  aboutText:{
     color: colors.lightText,
-    height:'50vh'
+    marginLeft:'25%',
+    paddingRight:'100px',
+    maxWidth:'700px',
+
   },
 
 });
@@ -74,10 +98,11 @@ export default function Home() {
           <Link href= 'https://wisdomweavercoaching.youcanbook.me/' {...stylex.props(styles.heroLink)}>Book a Free Consultaion</Link>
         </div>
       </div>
-      <div {...stylex.props(styles.lightsSection)}>
-        <div>
-          <h2>Who We Are</h2>
-          <p></p>
+      <div {...stylex.props(styles.aboutSection)}>
+        <div {...stylex.props(styles.aboutImageContainer)}>image</div>
+        <div {...stylex.props(styles.about)}>
+          <h2 {...stylex.props(styles.aboutHeading)}>Who We Are</h2>
+          <p {...stylex.props(styles.aboutText)}>At Wisdom Weaver Coaching, we are dedicated to helping individuals unleash their inner greatness and live authentically. Founded by Araceli Lopez, our coaching practice is built upon a foundation of passion, expertise, and a genuine commitment to supporting others in their personal and professional growth. As a certified coach, I have helped countless clients overcome challenges, break through limitations, and create meaningful change in their lives. Our mission is simple: to inspire and empower you to become the best version of yourself. Whether you're navigating a career transition, seeking to improve your well-being, or striving for greater fulfillment, we are here to provide the guidance, support, and encouragement you need to thrive. Get to know us more and discover how our transformative coaching services can help you unlock your potential and create a life you love</p>
         </div>
 
       </div>
