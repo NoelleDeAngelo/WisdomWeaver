@@ -61,38 +61,63 @@ const styles = stylex.create({
   },
   aboutImageContainer:{
     display:'flex',
-    flex: '1 0 200px',
+    flex: '1 0 100px',
     alignItems:'center',
     justifyContent:'center',
     background:colors.lightBackground,
+    minHeight:'250px',
   },
   aboutImage:{
     borderRadius:'50%',
     position:'relative',
-    left:'150px',
+    left:{
+      default:'50%',
+      '@media (width <= 799px)':'0px'
+    },
     outline: '6px solid',
     outlineColor:colors.lightAccent,
     outlineOffset:'4px',
-
+    width:{
+      default:'275px',
+      '@media (850px < width <= 950px)':'250px',
+      '@media (width <= 850px)':'200px',
+    },
+    height:{
+      default:'275px',
+      '@media (850px < width <= 950px)':'250px',
+      '@media (width <= 850px)':'200px',
+    },
 
   },
   about:{
     display:'flex',
     flexDirection:'column',
     background:'white',
-    flex: '3 0 600px',
+    flex: '3 1 600px',
     justifyContent:'center',
+    alignItems:{
+      default:null,
+      '@media (width <= 950px)':'center',
+    }
   },
   aboutHeading:{
     color: colors.lightHeading,
-    marginLeft:'22%',
+    marginLeft:{
+      default:'22%',
+      '@media (width <= 950px)':'0px',
+    },
     marginBottom:'0',
     justifySelf:'flex-start',
   },
   aboutText:{
     color: colors.lightText,
-    marginLeft:'25%',
-    paddingRight:'100px',
+    marginTop:'10px',
+    marginBottom:'10px',
+    marginRight:'10%',
+    marginLeft:{
+      default:'25%',
+      '@media (width <= 800px)':'10%',
+    },
     maxWidth:'700px',
 
   },
