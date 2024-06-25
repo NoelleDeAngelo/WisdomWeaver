@@ -2,6 +2,7 @@ import * as stylex from '@stylexjs/stylex';
 import Nav from '../components/Nav.js'
 import {colors,spacing,fonts} from '../tokens.stylex';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const styles = stylex.create({
   home: {
@@ -63,6 +64,17 @@ const styles = stylex.create({
     flex: '1 0 200px',
     alignItems:'center',
     justifyContent:'center',
+    background:colors.lightBackground,
+  },
+  aboutImage:{
+    borderRadius:'50%',
+    position:'relative',
+    left:'150px',
+    outline: '6px solid',
+    outlineColor:colors.lightAccent,
+    outlineOffset:'4px',
+
+
   },
   about:{
     display:'flex',
@@ -99,7 +111,15 @@ export default function Home() {
         </div>
       </div>
       <div {...stylex.props(styles.aboutSection)}>
-        <div {...stylex.props(styles.aboutImageContainer)}>image</div>
+        <div {...stylex.props(styles.aboutImageContainer)}>
+          <Image
+          {...stylex.props(styles.aboutImage)}
+            src='/images/Araceli.png'
+            width={275}
+            height={275}
+            alt="Wisdom Weaver Coaching Logo"
+          />
+        </div>
         <div {...stylex.props(styles.about)}>
           <h2 {...stylex.props(styles.aboutHeading)}>Who We Are</h2>
           <p {...stylex.props(styles.aboutText)}>At Wisdom Weaver Coaching, we are dedicated to helping individuals unleash their inner greatness and live authentically. Founded by Araceli Lopez, our coaching practice is built upon a foundation of passion, expertise, and a genuine commitment to supporting others in their personal and professional growth. As a certified coach, I have helped countless clients overcome challenges, break through limitations, and create meaningful change in their lives. Our mission is simple: to inspire and empower you to become the best version of yourself. Whether you're navigating a career transition, seeking to improve your well-being, or striving for greater fulfillment, we are here to provide the guidance, support, and encouragement you need to thrive. Get to know us more and discover how our transformative coaching services can help you unlock your potential and create a life you love</p>

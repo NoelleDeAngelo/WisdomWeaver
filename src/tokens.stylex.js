@@ -18,6 +18,7 @@ export const colors = stylex.defineVars({
   lightText:{default:'#234649'},
   lightLink:{default:'#b26429'},
   lightLinkHighlight:{default:'#078080'},
+  lightAccent: {default:'#234649'},
   //Dark Sections//
   darkBackground:{default:'#234649'},
   darkHeading:{default:'#f6f0e5'},
