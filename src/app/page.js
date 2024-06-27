@@ -3,6 +3,7 @@ import Nav from "../components/Nav.js";
 import { colors, spacing, fonts } from "../tokens.stylex";
 import Link from "next/link";
 import About from "../components/About.js";
+import Services from "../components/Services.js";
 
 
 
@@ -75,6 +76,7 @@ export default function Home() {
         </div>
       </div>
       <About/>
+      <Services/>
     </div>
   );
 }

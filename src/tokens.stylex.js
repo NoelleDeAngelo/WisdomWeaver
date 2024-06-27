@@ -21,7 +21,7 @@ export const colors = stylex.defineVars({
   lightAccent: {default:'#234649'},
   //Dark Sections//
   darkBackground:{default:'#234649'},
-  darkHeading:{default:'#f6f0e5'},
+  darkHeading:{default:'#e2725b'},
   darkSubheading:{default:'#eab5ac'},
   darkText:{default:'#f8f5f2'},
   darkLink:{default:'#b26429'},
@@ -42,7 +42,8 @@ export const spacing = stylex.defineVars({
 });
 
 export const fonts = stylex.defineVars({
-  brand: 'Sacramento, cursive',
-  heading:'Merriweather',
-  text: 'Nunito, sans-serif',
+  brand: 'Sacramento',
+  heading: 'Merriweather',
+  subHeading:'Open Sans',
+  text: 'Nunito',
 });
