@@ -50,9 +50,10 @@ const styles = stylex.create({
     },
   },
   aboutHeading: {
+    fontFamily:fonts.subHeading,
     color: colors.lightHeading,
     marginLeft: {
-      default: "21%",
+      default: "22%",
       "@media (800px < width <= 9500px)": "15%",
       "@media (width <= 800px)": "0",
     },
