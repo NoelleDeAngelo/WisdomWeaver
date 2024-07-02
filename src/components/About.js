@@ -54,8 +54,8 @@ const styles = stylex.create({
     color: colors.lightHeading,
     marginLeft: {
       default: "22%",
-      "@media (800px < width <= 9500px)": "15%",
-      "@media (width <= 800px)": "0",
+      "@media (799px < width <= 9500px)": "15%",
+      "@media (width <= 799px)": "0",
     },
     marginBottom: "0",
   },
@@ -66,7 +66,7 @@ const styles = stylex.create({
     marginRight: "10%",
     marginLeft: {
       default: "25%",
-      "@media (width <= 800px)": "10%",
+      "@media (width <= 799px)": "10%",
     },
     maxWidth: "700px",
     textAlign: {
