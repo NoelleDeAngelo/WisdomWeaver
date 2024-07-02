@@ -85,7 +85,7 @@ export default function About() {
           src="/images/Araceli.png"
           width={275}
           height={275}
-          alt="Wisdom Weaver Coaching Logo"
+          alt="Image of the founder of Wisdom Weaver Coaching"
         />
       </div>
       <div {...stylex.props(styles.about)}>
