@@ -58,11 +58,11 @@ const styles = stylex.create({
       "@media (width <= 799px)": "0",
     },
     marginBottom: "0",
-    fontSize: "25px",
+    fontSize: "45px",
   },
   aboutText: {
     color: colors.lightText,
-    fontSize: "18px",
+    fontSize: "22px",
     marginTop: "10px",
     marginBottom: "10px",
     marginRight: "10%",
