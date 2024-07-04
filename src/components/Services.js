@@ -11,53 +11,53 @@ const styles = stylex.create({
   },
   sectionHeading: {
     fontFamily: fonts.subHeading,
-    fontSize: "45px",
+    fontSize: {
+      default: "80px",
+      "@media (width <= 550px)": "50px"
+    },
+    letterSpacing:'2px',
     color: colors.darkHeading,
     alignSelf: "center",
   },
   serviceContainer: {
-    margin: "50px 5%",
+    margin: "8% 5%",
     display: "flex",
     flexDirection: {
       default: "row",
-      "@media (width <= 700px)": "column",
+      "@media (width <= 750px)": "column",
     },
-    justifyContent: "space-between",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   reverse: {
     flexDirection: {
       default: "row",
-      "@media (width <= 700px)": "column-reverse",
+      "@media (width <= 750px)": "column-reverse",
     },
   },
   photo: {
-    //borderRadius: "5%",
+    width: "60%",
+    height: "auto",
+    maxWidth: "500px",
+    minWidth: "320px",
+    borderRadius: ".5%",
   },
   textContainer: {
     maxWidth: "600px",
     minWidth: "270px",
     flexShrink: "1",
     alignSelf: "center",
+    margin: "0px 5%",
   },
   serviceHeading: {
     fontFamily: fonts.subHeading,
-    letterSpacing: ".4px",
+    letterSpacing: "1px",
     color: colors.darkSubheading,
-    fontSize: "25px",
+    fontSize: "35px",
   },
   serviceText: {
     color: colors.darkText,
-    fontSize: "20px",
-  },
-  textLeft: {
-    marginRight: "35px",
-    marginLeft: {
-      default: "10%",
-      "@media (width <= 800px)": "5%",
-    },
-  },
-  textRight: {
-    marginLeft: "35px",
+    fontSize: "25px",
   },
 });
 
@@ -66,8 +66,8 @@ export default function Services() {
     <div {...stylex.props(styles.sectionContainer)}>
       <h2 {...stylex.props(styles.sectionHeading)}>Our Services</h2>
       <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
-        <div {...stylex.props(styles.textContainer, styles.textLeft)}>
-          <h3 {...stylex.props(styles.serviceHeading)}>One on One coaching</h3>
+        <div {...stylex.props(styles.textContainer)}>
+          <h3 {...stylex.props(styles.serviceHeading)}>One on One Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
             Experience the power of personalized coaching tailored to your
             specific goals and aspirations. Work closely with a Wisdom Weaver
@@ -77,20 +77,21 @@ export default function Services() {
         </div>
         <Image
           {...stylex.props(styles.photo)}
-          src="/images/bookandlaptop.jpg"
-          width={320}
-          height={240}
+          src="/images/OneOnOne.jpg"
+          width={480}
+          height={360}
           alt="Image of an open notebook in front of a open laptop"
         />
       </div>
       <div {...stylex.props(styles.serviceContainer)}>
         <Image
-          src="/images/bookandlaptop.jpg"
-          width={320}
-          height={240}
+          {...stylex.props(styles.photo)}
+          src="/images/Group.jpg"
+          width={480}
+          height={360}
           alt="Image of an open notebook in front of a open laptop"
         />
-        <div {...stylex.props(styles.textContainer, styles.textRight)}>
+        <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Group Workshops</h3>
           <p {...stylex.props(styles.serviceText)}>
             Join a supportive community of like-minded individuals and
@@ -100,7 +101,7 @@ export default function Services() {
         </div>
       </div>
       <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
-        <div {...stylex.props(styles.textContainer, styles.textLeft)}>
+        <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Specilized Programs</h3>
           <p {...stylex.props(styles.serviceText)}>
             From career development to wellness coaching, our specialized
@@ -109,20 +110,22 @@ export default function Services() {
           </p>
         </div>
         <Image
-          src="/images/bookandlaptop.jpg"
-          width={320}
-          height={240}
+          {...stylex.props(styles.photo)}
+          src="/images/Specilized.jpg"
+          width={480}
+          height={360}
           alt="Image of an open notebook in front of a open laptop"
         />
       </div>
       <div {...stylex.props(styles.serviceContainer)}>
         <Image
-          src="/images/bookandlaptop.jpg"
-          width={320}
-          height={240}
+          {...stylex.props(styles.photo)}
+          src="/images/Corporate.jpg"
+          width={480}
+          height={360}
           alt="Image of an open notebook in front of a open laptop"
         />
-        <div {...stylex.props(styles.textContainer, styles.textRight)}>
+        <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Corporate Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
             Elevate team performance, enhance leadership skills, and cultivate a
