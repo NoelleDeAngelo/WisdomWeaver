@@ -43,6 +43,7 @@ const styles = stylex.create({
     flexDirection: "column",
     background: "white",
     flex: "3 1 600px",
+    paddingBottom:'20px',
     justifyContent: "center",
     alignItems: {
       default: null,

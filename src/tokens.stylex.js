@@ -19,6 +19,7 @@ export const colors = stylex.defineVars({
   lightLink: { default: "#b26429" },
   lightLinkHighlight: { default: "#078080" },
   lightAccent: { default: "#234649" },
+  lightButton: { default: "#eab5ac" },
   //Dark Sections//
   darkBackground: { default: "#365051" },
   darkHeading: { default: "#f6f0e5" },
@@ -27,6 +28,7 @@ export const colors = stylex.defineVars({
   darkLink: { default: "#b26429" },
   darkLinkHighlight: { default: "#078080" },
   darkButton: { default: "#e2725b" },
+  darkButtonHighlight: { default: "#e78774" },
 });
 
 export const spacing = stylex.defineVars({

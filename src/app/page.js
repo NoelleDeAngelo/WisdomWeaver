@@ -13,7 +13,7 @@ const styles = stylex.create({
     fontFamily: fonts.text,
     padding: 0,
     margin: 0,
-    minHeight: "75vh",
+    minHeight: "80vh",
     display: "flex ",
     flexDirection: "column",
   },
@@ -22,12 +22,11 @@ const styles = stylex.create({
     color: colors.heroText,
     alignItems: "center",
     flexDirection: "column",
-    height: "40vh",
+    height: "80vh",
     minHeight: "275px",
     justifyContent: "center",
     padding: {
-      default: "10vh 25vw",
-      "@media (width <= 700px)": "10vh 10vw",
+      default: "10vh 10vw",
     },
     minWidth: "200px",
   },
@@ -44,15 +43,23 @@ const styles = stylex.create({
     letterSpacing: ".6px",
     textAlign: "center",
     fontSize: {
-      default: "2.5rem",
-      "@media (width <= 750px)": "1.8rem",
+      default: "60px",
+      "@media (455px< width <= 865px)": "50px",
+      "@media (width <= 455px)": "40px",
     },
   },
   heroLink: {
     color: colors.heroText,
-    padding: "5vh 0vh",
+    background: {
+      default: colors.darkButton,
+      ":hover": colors.darkButtonHighlight,
+    },
+    fontFamily: fonts.text,
+    textDecoration:"none",
+    margin: "5%",
+    padding:"15px",
     fontSize: {
-      default: "1.5rem",
+      default: "22px",
       "@media (width <= 750px)": "1.2rem",
     },
     fontWeight: "300",
@@ -71,7 +78,7 @@ export default function Home() {
             href="https://wisdomweavercoaching.youcanbook.me/"
             {...stylex.props(styles.heroLink)}
           >
-            Book a Free Consultaion
+            Get Started
           </Link>
         </div>
       </div>

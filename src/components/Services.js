@@ -24,7 +24,7 @@ const styles = stylex.create({
     display: "flex",
     flexDirection: {
       default: "row",
-      "@media (width <= 750px)": "column",
+      "@media (width <= 850px)": "column",
     },
     justifyContent: "space-around",
     alignItems: "center",
@@ -32,7 +32,7 @@ const styles = stylex.create({
   reverse: {
     flexDirection: {
       default: "row",
-      "@media (width <= 750px)": "column-reverse",
+      "@media (width <= 850px)": "column-reverse",
     },
   },
   photo: {
