@@ -60,9 +60,8 @@ export default function Nav() {
       <div {...stylex.props(styles.linkList)}>
       <Link href='/' {...stylex.props(styles.link)}>Home</Link>
       <Link href='/coachingapproach' {...stylex.props(styles.link)}>Approach</Link>
-      <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link>
+      {/* <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link> */}
       <Link href='/contactus' {...stylex.props(styles.link)}>Contact Us</Link>
-      <Link href='/services' {...stylex.props(styles.link)}>Our Services</Link>
       <Link href='/resources' {...stylex.props(styles.link)}>Resources</Link>
       </div>
     </div>
