@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 const styles = stylex.create({
-  sectionContainer: {
+  ServicesSection: {
     background: colors.darkBackground,
     display: "flex",
     flexDirection: "column",
@@ -63,7 +63,7 @@ const styles = stylex.create({
 
 export default function Services() {
   return (
-    <div {...stylex.props(styles.sectionContainer)}>
+    <div {...stylex.props(styles.ServicesSection)}>
       <h2 {...stylex.props(styles.sectionHeading)}>Our Services</h2>
       <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
         <div {...stylex.props(styles.textContainer)}>

@@ -11,7 +11,7 @@ const styles = stylex.create({
   menuIcon: {
     display: {
       default:'none',
-      '@media (width <= 1000px)': 'flex',
+      '@media (width <= 800px)': 'flex',
     },
     padding: '5px 10px',
     fontSize: '35px',

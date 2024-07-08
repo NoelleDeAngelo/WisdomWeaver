@@ -13,11 +13,15 @@ const styles = stylex.create({
     fontFamily: fonts.text,
     padding: 0,
     margin: 0,
-    minHeight: "80vh",
+    //minHeight: "80vh",
     display: "flex ",
     flexDirection: "column",
   },
-  hero: {
+  heroSection: {
+    position: "relative",
+    top: "-55px",
+  },
+  heroText: {
     display: "flex",
     color: colors.heroText,
     alignItems: "center",
@@ -35,7 +39,6 @@ const styles = stylex.create({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    position: "relative",
   },
   heroHeader: {
     fontFamily: fonts.heading,
@@ -55,9 +58,9 @@ const styles = stylex.create({
       ":hover": colors.darkButtonHighlight,
     },
     fontFamily: fonts.text,
-    textDecoration:"none",
+    textDecoration: "none",
     margin: "5%",
-    padding:"15px",
+    padding: "15px",
     fontSize: {
       default: "22px",
       "@media (width <= 750px)": "1.2rem",
@@ -69,21 +72,25 @@ const styles = stylex.create({
 export default function Home() {
   return (
     <div {...stylex.props(styles.home)}>
-      <div {...stylex.props(styles.heroImage)}>
-        <div {...stylex.props(styles.hero)}>
-          <h1 {...stylex.props(styles.heroHeader)}>
-            Embark on a Transformative Journey with Our Intuitive Life Coaching
-          </h1>
-          <Link
-            href="https://wisdomweavercoaching.youcanbook.me/"
-            {...stylex.props(styles.heroLink)}
-          >
-            Get Started
-          </Link>
+      <div {...stylex.props(styles.heroSection)}>
+        <div {...stylex.props(styles.heroImage)}>
+          <div {...stylex.props(styles.heroText)}>
+            <h1 {...stylex.props(styles.heroHeader)}>
+              Embark on a Transformative Journey with Our Intuitive Life
+              Coaching
+            </h1>
+            <Link
+              href="https://wisdomweavercoaching.youcanbook.me/"
+              {...stylex.props(styles.heroLink)}
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
       </div>
-      <About/>
-      <Services/>
+
+      <About />
+      <Services />
     </div>
   );
 }
