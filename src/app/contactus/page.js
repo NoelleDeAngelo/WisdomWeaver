@@ -1,50 +1,111 @@
-import * as stylex from '@stylexjs/stylex';
-import Link from 'next/link';
-import {colors,spacing,fonts} from '../../tokens.stylex';
+import * as stylex from "@stylexjs/stylex";
+import Link from "next/link";
+import { colors, spacing, fonts } from "../../tokens.stylex";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
   page: {
-    background: '#28595A',
-    color: '#f37353',
+    height: "100vh",
+    background: colors.whiteBackground,
   },
-  section:{
-    padding: '75px 100px',
-    display:'flex',
-    flexDirection:'column',
+  navBackground: {
+    position: "relative",
+    height: "70px",
+    top: "-55px",
+    background: colors.darkBackground,
   },
-  heading:{
-    marginBottom:'20px'
+  contactSection: {
+    padding: "25px 100px",
+    display: "flex",
+    flexDirection: "row",
+    background: colors.whiteBackground,
   },
-  text:{
-    margin:'0px',
+  sectionLeft: {
+    margin: "0 7%",
+    display: "flex",
+    flexDirection: "column",
   },
-  linkContainer:{
-    margin: '20px',
+  heading: {
+    color: colors.lightHeading,
+    fontSize: "70px",
+    fontFamily: fonts.subHeading,
   },
-  link:{
-    color: colors.headline,
-    fontSize: {
-      default:'1.5rem',
-      '@media (width <= 750px)':'1.2rem',
+  text: {
+    margin: "15px",
+    fontFamily: fonts.text,
+    fontSize: "18px",
+    //postion: "relative",
+    color: colors.lightText,
+  },
+  socialIconList: {
+  },
+  socialIcon: {
+    color: colors.darkButton,
+    fontSize: "30px",
+    margin: "5%",
+
+  },
+  link: {
+    display: "block",
+    color: colors.heroText,
+    background: {
+      default: colors.darkButton,
+      ":hover": colors.darkButtonHighlight,
     },
-    fontStyle: 'italic',
-    fontWeight:'300',
-},
+    fontFamily: fonts.text,
+    textDecoration: "none",
+    marginTop: "55px",
+    padding: "15px",
+    borderRadius: "5px",
+    fontSize: {
+      default: "20px",
+      "@media (width <= 750px)": "18px",
+    },
+    fontWeight: "300",
+    textAlign: "center",
+    maxWidth: "220px",
+    //alignSelf: "center",
+  },
+  sectionRight: {
+    display: "flex",
+    justifyContent:"center",
+  },
 });
 
 
 export default function ContactUs() {
   return (
     <div {...stylex.props(styles.page)}>
-      <div {...stylex.props(styles.section)}>
-        <h1 {...stylex.props(styles.heading)}>Contact Us</h1>
-        <h4 {...stylex.props(styles.text)}>Ready to take the first step towards positive change? We would love to hear from you! Whether you have questions about our coaching services, want to schedule a consultation, or simply wish to connect, feel free to reach out to us. You can contact us via phone, email, or by scheduling below. We value your privacy and confidentiality, and all communications will be kept strictly confidential. Let's start the conversation and explore how we can support you on your journey to personal growth and fulfillment. We look forward to connecting with you soon!
-        </h4>
-        <div {...stylex.props(styles.linkContainer)}>
-          <Link href= 'https://wisdomweavercoaching.youcanbook.me/' {...stylex.props(styles.link)}>Book a Free Consultaion</Link>
+      <div {...stylex.props(styles.navBackground)}></div>
+      <div {...stylex.props(styles.contactSection)}>
+        <div {...stylex.props(styles.sectionLeft)}>
+          <h1 {...stylex.props(styles.heading)}>Contact Us</h1>
+          <h4 {...stylex.props(styles.text)}>
+            Araceli@wisdomweavercoaching.com
+            <br></br>
+            <br></br>
+            (555)-555-5555
+          </h4>
+          <div {...stylex.props(styles.socialIconList)}>
+            <a href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg">
+              <FaFacebook {...stylex.props(styles.socialIcon)} />
+            </a>
+            <a href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw==">
+              <FaInstagram {...stylex.props(styles.socialIcon)} />
+            </a>
+          </div>
+          <Link
+            href="https://wisdomweavercoaching.youcanbook.me/"
+            {...stylex.props(styles.link)}
+          >
+            Book a Free Consultaion
+          </Link>
         </div>
-
+        <div {...stylex.props(styles.sectionRight)}>
+          <form>
+          </form>
+        </div>
       </div>
     </div>
-  )
+  );
 }

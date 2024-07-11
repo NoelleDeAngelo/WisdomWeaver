@@ -61,6 +61,7 @@ const styles = stylex.create({
     textDecoration: "none",
     margin: "5%",
     padding: "15px",
+    borderRadius: "5px",
     fontSize: {
       default: "22px",
       "@media (width <= 750px)": "1.2rem",
