@@ -1,5 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm.js";
 import { colors, spacing, fonts } from "../../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
@@ -71,18 +72,12 @@ const styles = stylex.create({
     display: "flex",
     justifyContent:"center",
   },
-  form: {
-    display: "flex",
-    flexDirection:"column",
-  },
-  messageBox: {
-    resize:"none"
-
-  },
 });
 
 
 export default function ContactUs() {
+
+
   return (
     <div {...stylex.props(styles.page)}>
       <div {...stylex.props(styles.navBackground)}></div>
@@ -111,32 +106,7 @@ export default function ContactUs() {
           </Link>
         </div>
         <div {...stylex.props(styles.sectionRight)}>
-          <form {...stylex.props(styles.form)}>
-            <div>
-              <label for="firstName">First Name: </label>
-              <input type="text" name="firstName" id="firstName" required />
-              <label for="lastName">First Name: </label>
-              <input type="text" name="lastName" id="lastName" required />
-            </div>
-            <div>
-              <label for="email">Email: </label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div>
-              <label for="message">Message: </label>
-              <textarea
-                name="message"
-                id="message"
-                cols="50"
-                rows= "5"
-                required
-                {...stylex.props(styles.messageBox)}
-              />
-            </div>
-            <div>
-              <input type="submit" value="Send" />
-            </div>
-          </form>
+          <ContactForm/>
         </div>
       </div>
     </div>
