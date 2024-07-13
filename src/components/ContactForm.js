@@ -30,17 +30,17 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
       <div>
-        <label for="firstName">First Name: </label>
+        <label htmlFor="firstName">First Name: </label>
         <input type="text" name="firstName" id="firstName" required />
-        <label for="lastName">First Name: </label>
+        <label htmlFor="lastName">First Name: </label>
         <input type="text" name="lastName" id="lastName" required />
       </div>
       <div>
-        <label for="email">Email: </label>
+        <label htmlFor="email">Email: </label>
         <input type="email" name="email" id="email" required />
       </div>
       <div>
-        <label for="message">Message: </label>
+        <label htmlFor="message">Message: </label>
         <textarea
           name="message"
           id="message"
