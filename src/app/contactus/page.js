@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
   page: {
-    height: "100vh",
+    minHeight:"80vh",
     background: colors.whiteBackground,
   },
   navBackground: {
@@ -19,6 +19,7 @@ const styles = stylex.create({
     padding: "25px 100px",
     display: "flex",
     flexDirection: "row",
+    flexWrap:"wrap",
     justifyContent:"space-around",
     background: colors.whiteBackground,
   },
@@ -70,7 +71,9 @@ const styles = stylex.create({
   },
   sectionRight: {
     display: "flex",
-    justifyContent:"center",
+    justifyContent: "center",
+    padding: "25px",
+    width:"40%",
   },
 });
 
