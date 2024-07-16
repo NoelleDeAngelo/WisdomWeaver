@@ -1,6 +1,19 @@
 "use client";
 import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, fonts } from "../tokens.stylex";
+import { useState } from "react";
+
+const fadeIn = stylex.keyframes({
+  "0%": { opacity: 0 },
+  "15%": { opacity: 1 },
+  "85%": {opacity: 1 },
+  "100%": { opacity: 0 },
+});
+
+const fadeOut = stylex.keyframes({
+  "0%": { opacity: 1 },
+  "100%": { opacity: 0 },
+});
 
 const styles = stylex.create({
   form: {
@@ -43,7 +56,7 @@ const styles = stylex.create({
     resize: "none",
   },
   sendButton: {
-    border:"none",
+    border: "none",
     color: colors.heroText,
     background: {
       default: colors.darkButton,
@@ -51,7 +64,7 @@ const styles = stylex.create({
     },
     fontFamily: fonts.text,
     padding: "15px",
-    marginTop:"8px",
+    marginTop: "8px",
     borderRadius: "5px",
     fontSize: {
       default: "20px",
@@ -60,85 +73,115 @@ const styles = stylex.create({
     fontWeight: "300",
     textAlign: "center",
   },
-  sectionRight: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "25px",
-    width: "40%",
+  thankYouNotShowing: {
+    display: "none",
+  },
+  thankYouShowing: {
+    marginTop: "25px",
+    display: "block",
+    animationName: fadeIn,
+    animationDuration: "5s",
+    animationFillMode: "forwards",
+  },
+  thankYou: {
+    fontFamily: fonts.subHeading,
+    fontSize: "22px",
+    fontWeight: "300",
+    letterSpacing: ".5px",
   },
 });
 
 export default function ContactForm() {
+
+  const [showing, setShowing] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    await fetch("/api/sendEmail", {
+    const res = await fetch("/api/sendEmail", {
       method: "POST",
       body: JSON.stringify(data),
     });
+    if (res.status === 200) {
+      e.target.reset();
+      setShowing(true);
+      setTimeout(() => {
+        setShowing(false)
+      }, 6000);
+    } else {
+      alert("Something went wrong. Please try again later.")
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
-      <div {...stylex.props(styles.formRow)}>
-        <div {...stylex.props(styles.inputContainer)}>
-          <label htmlFor="firstName" {...stylex.props(styles.label)}>
-            First Name
-          </label>
+    <div>
+      <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
+        <div {...stylex.props(styles.formRow)}>
+          <div {...stylex.props(styles.inputContainer)}>
+            <label htmlFor="firstName" {...stylex.props(styles.label)}>
+              First Name
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              required
+              {...stylex.props(styles.input)}
+            />
+          </div>
+          <div {...stylex.props(styles.inputContainer)}>
+            <label htmlFor="lastName" {...stylex.props(styles.label)}>
+              Last Name
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              required
+              {...stylex.props(styles.input)}
+            />
+          </div>
+        </div>
+        <div {...stylex.props(styles.formRow)}>
+          <div {...stylex.props(styles.inputContainer)}>
+            <label htmlFor="email" {...stylex.props(styles.label)}>
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              {...stylex.props(styles.input)}
+            />
+          </div>
+        </div>
+        <div {...stylex.props(styles.formRow)}>
+          <div {...stylex.props(styles.inputContainer)}>
+            <label htmlFor="message" {...stylex.props(styles.label)}>
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              required
+              {...stylex.props(styles.input, styles.messageBox)}
+            />
+          </div>
+        </div>
+        <div>
           <input
-            type="text"
-            name="firstName"
-            id="firstName"
-            required
-            {...stylex.props(styles.input)}
+            type="submit"
+            value="Send"
+            {...stylex.props(styles.sendButton)}
           />
         </div>
-        <div {...stylex.props(styles.inputContainer)}>
-          <label htmlFor="lastName" {...stylex.props(styles.label)}>
-            Last Name
-          </label>
-          <input
-            type="text"
-            name="lastName"
-            id="lastName"
-            required
-            {...stylex.props(styles.input)}
-          />
-        </div>
+      </form>
+      <div {...stylex.props(showing ? styles.thankYouShowing : styles.thankYouNotShowing)}>
+        <p {...stylex.props(styles.thankYou)}>Thank you. Your message has been sent.</p>
       </div>
-      <div {...stylex.props(styles.formRow)}>
-        <div {...stylex.props(styles.inputContainer)}>
-          <label htmlFor="email" {...stylex.props(styles.label)}>
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            {...stylex.props(styles.input)}
-          />
-        </div>
-      </div>
-      <div {...stylex.props(styles.formRow)}>
-        <div {...stylex.props(styles.inputContainer)}>
-          <label htmlFor="message" {...stylex.props(styles.label)}>
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            //cols="50"
-            rows="5"
-            required
-            {...stylex.props(styles.input, styles.messageBox)}
-          />
-        </div>
-      </div>
-      <div>
-        <input type="submit" value="Send" {...stylex.props(styles.sendButton)} />
-      </div>
-    </form>
+    </div>
   );
 }

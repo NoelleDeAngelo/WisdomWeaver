@@ -22,3 +22,17 @@ export async function POST(req) {
   }
 };
 
+
+
+
+// use to test email responses on client without sending actual email - add data.working = true or false to handleSubmit
+
+/*export async function POST(req) {
+  const body = await req.json();
+  if (body.working) {
+    return Response.json({ status: 200 });
+  }
+  return Response.json({}, { status: 500 });
+};*/
+
+
