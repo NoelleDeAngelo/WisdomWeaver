@@ -12,7 +12,7 @@ export async function POST(req) {
       to: ["araceli@wisdomweavercoaching.com"],
       reply_to: body.email.toString(),
       subject: "Message from Contact Form",
-      react: <EmailTemplate name={body.firstName + body.lastName} email={body.email} message={body.message} />
+      react: <EmailTemplate name={body.firstName +" "+ body.lastName} email={body.email} message={body.message} />
     });
     if (error) {
       return Response.json({ error }, { status: 500 });
