@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import EmailTemplate from "../../../components/EmailTemplate.jsx";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,7 +12,7 @@ export async function POST(req) {
       to: ["araceli@wisdomweavercoaching.com"],
       reply_to: body.email.toString(),
       subject: "Message from Contact Form",
-      text: `Email from: ${body.email} , Name: ${body.firstName} ${body.lastName} They said: ${body.message}`,
+      react: <EmailTemplate name={body.firstName + body.lastName} email={body.email} message={body.message} />
     });
     if (error) {
       return Response.json({ error }, { status: 500 });
