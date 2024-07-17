@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import {colors,spacing,fonts} from "../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import NewsletterForm from "./NewsletterForm.js"
+import NewsletterForm from "./NewsletterForm.jsx"
 
 const styles = stylex.create({
   footer: {

@@ -10,7 +10,7 @@ export async function POST(req) {
       from: "araceli@wisdomweavercoaching.com",
       to: ["araceli@wisdomweavercoaching.com"],
       reply_to: body.email.toString(),
-      subject: "Message from Contact Us Form",
+      subject: "Message from Contact Form",
       text: `Email from: ${body.email} , Name: ${body.firstName} ${body.lastName} They said: ${body.message}`,
     });
     if (error) {

@@ -1,9 +1,9 @@
 import * as stylex from "@stylexjs/stylex";
-import Nav from "../components/Nav.js";
+import Nav from "../components/Nav.jsx";
 import { colors, spacing, fonts } from "../tokens.stylex";
 import Link from "next/link";
-import About from "../components/About.js";
-import Services from "../components/Services.js";
+import About from "../components/About.jsx";
+import Services from "../components/Services.jsx";
 
 
 

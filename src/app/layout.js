@@ -1,7 +1,7 @@
 
 import './global.css'
-import Nav from '../components/Nav.js'
-import Footer from '../components/Footer.js'
+import Nav from '../components/Nav.jsx'
+import Footer from '../components/Footer.jsx'
 
 export const metadata = {
   title: "Wisdom Weaver Coaching",

@@ -1,7 +1,7 @@
 import * as stylex from '@stylexjs/stylex';
 import {colors,spacing,fonts} from '../tokens.stylex';
 import Link from 'next/link';
-import HamburgerMenu from './HamburgerMenu.js';
+import HamburgerMenu from './HamburgerMenu.jsx';
 
 
 const styles = stylex.create({

@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm.js";
+import ContactForm from "../../components/ContactForm.jsx";
 import { colors, spacing, fonts } from "../../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
