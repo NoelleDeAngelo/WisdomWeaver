@@ -20,9 +20,9 @@ const styles = stylex.create({
   brandName: {
     fontFamily: fonts.brand,
     fontSize: {
-      default: "40px",
-      "@media (450px < width <= 1000px )": "35px",
-      "@media (width <= 450px)": "25px",
+      default: "4rem",
+      "@media (450px < width <= 1000px )": "3.5rem",
+      "@media (width <= 450px)": "2.5rem",
     },
     margin: spacing.medium,
     letterSpacing: ".7px",
@@ -42,8 +42,8 @@ const styles = stylex.create({
     padding: "0vw .7vw",
     fontFamily: fonts.text,
     fontSize: {
-      default: "22px",
-      "@media (width <= 1000px)": "18px",
+      default: "2.2rem",
+      "@media (width <= 1000px)": "1.8rem",
     },
     color: {
       default: "white",

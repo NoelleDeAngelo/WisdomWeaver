@@ -30,13 +30,13 @@ const styles = stylex.create({
   },
   heading: {
     color: colors.lightHeading,
-    fontSize: "70px",
+    fontSize: "7rem",
     fontFamily: fonts.subHeading,
   },
   text: {
     margin: "15px",
     fontFamily: fonts.text,
-    fontSize: "18px",
+    fontSize: "1.8rem",
     //postion: "relative",
     color: colors.lightText,
   },
@@ -44,7 +44,7 @@ const styles = stylex.create({
   },
   socialIcon: {
     color: colors.darkButton,
-    fontSize: "30px",
+    fontSize: "3rem",
     margin: "5%",
 
   },
@@ -61,8 +61,8 @@ const styles = stylex.create({
     padding: "15px",
     borderRadius: "5px",
     fontSize: {
-      default: "20px",
-      "@media (width <= 750px)": "18px",
+      default: "2rem",
+      "@media (width <= 750px)": "1.8rem",
     },
     fontWeight: "300",
     textAlign: "center",

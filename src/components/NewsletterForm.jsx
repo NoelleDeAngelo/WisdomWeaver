@@ -5,44 +5,40 @@ import { useState } from 'react';
 
 
 const styles = stylex.create({
-  form:{
+  form: {
+    display: "flex",
+    width:"100%",
   },
-  input:{
-    background:colors.darkBackground,
-    border: '2px solid',
-    //borderColor: colors.darkButton,
-    borderRadius:'5px',
-    padding: '10px',
-    fontSize: '16px',
-    width: '300px',
-    marginRight: '10px',
-    maxWidth: {
-      default:'450px',
-      '@media (865px < width <= 1050px )':'200px',
-      '@media (width < 865px )':'150px',
-    },
+  input: {
+    flex: "3 3",
+    background: colors.darkBackground,
+    border: "2px solid",
+    borderRadius: "5px",
+    padding: "10px",
+    fontSize: "1.6rem",
+    marginRight: "10px",
     color: colors.link,
-    '::placeholder': {
-        color: '#C0C0C0',
+    "::placeholder": {
+      color: "#C0C0C0",
     },
-    ':focus': {
-      outline: 'none',
+    ":focus": {
+      outline: "none",
     },
   },
-  button:{
+  button: {
+    flex: "1 1",
     backgroundColor: colors.darkButton,
-    borderRadius:'5px',
+    borderRadius: "5px",
     color: colors.darkText,
-    padding: '10px 20px',
-    fontSize: '16px',
-    border: 'none',
-    cursor: 'pointer',
-    ':hover': {
-        backgroundColor: '#006666',
+    padding: "10px 20px",
+    fontSize: "1.6rem",
+    border: "none",
+    cursor: "pointer",
+    ":hover": {
+      backgroundColor: "#006666",
     },
-    transition: 'background-color .3s ease',
+    transition: "background-color .3s ease",
   },
-
 });
 
 
@@ -58,11 +54,19 @@ export default function NewsletterForm(){
     })
   }
   return (
-    <form onSubmit={handleSubmit}>
-    <input type= 'email' placeholder='E-mail' required  {...stylex.props(styles.input)} onChange={e=>{setEmail(e.target.value)}} ></input>
-    <button {...stylex.props(styles.button)}>Subscribe</button>
-  </form>
-  )
+    <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
+      <input
+        type="email"
+        placeholder="E-mail"
+        required
+        {...stylex.props(styles.input)}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
+      ></input>
+      <button {...stylex.props(styles.button)}>Subscribe</button>
+    </form>
+  );
 }
 
 

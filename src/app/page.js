@@ -46,9 +46,9 @@ const styles = stylex.create({
     letterSpacing: ".6px",
     textAlign: "center",
     fontSize: {
-      default: "60px",
-      "@media (455px< width <= 865px)": "50px",
-      "@media (width <= 455px)": "40px",
+      default: "6rem",
+      "@media (455px< width <= 865px)": "5rem",
+      "@media (width <= 455px)": "4rem",
     },
   },
   heroLink: {
@@ -63,8 +63,8 @@ const styles = stylex.create({
     padding: "15px",
     borderRadius: "5px",
     fontSize: {
-      default: "22px",
-      "@media (width <= 750px)": "1.2rem",
+      default: "2.5rem",
+      "@media (width <= 750px)": "2.1rem",
     },
     fontWeight: "300",
   },

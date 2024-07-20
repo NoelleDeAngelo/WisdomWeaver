@@ -12,8 +12,8 @@ const styles = stylex.create({
   sectionHeading: {
     fontFamily: fonts.subHeading,
     fontSize: {
-      default: "80px",
-      "@media (width <= 550px)": "50px"
+      default: "8rem",
+      "@media (width <= 550px)": "5rem"
     },
     letterSpacing:'2px',
     color: colors.darkHeading,
@@ -53,11 +53,11 @@ const styles = stylex.create({
     fontFamily: fonts.subHeading,
     letterSpacing: "1px",
     color: colors.darkSubheading,
-    fontSize: "35px",
+    fontSize: "3.5rem",
   },
   serviceText: {
     color: colors.darkText,
-    fontSize: "25px",
+    fontSize: "2.5rem",
   },
 });
 

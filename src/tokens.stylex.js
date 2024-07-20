@@ -1,7 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
 
-
-
 export const colors = stylex.defineVars({
   //Main//
   background: { default: "#f8f5f2" },

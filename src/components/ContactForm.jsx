@@ -3,17 +3,13 @@ import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, fonts } from "../tokens.stylex";
 import { useState } from "react";
 
-const fadeIn = stylex.keyframes({
+const fadeInAndOut = stylex.keyframes({
   "0%": { opacity: 0 },
   "15%": { opacity: 1 },
   "85%": {opacity: 1 },
   "100%": { opacity: 0 },
 });
 
-const fadeOut = stylex.keyframes({
-  "0%": { opacity: 1 },
-  "100%": { opacity: 0 },
-});
 
 const styles = stylex.create({
   form: {
@@ -38,7 +34,7 @@ const styles = stylex.create({
   },
   label: {
     fontFamily: fonts.subHeading,
-    fontSize: "18px",
+    fontSize: "1.8rem",
     fontWeight: "300",
     letterSpacing: ".5px",
   },
@@ -47,7 +43,7 @@ const styles = stylex.create({
     padding: "5px",
     marginRight: "15px",
     fontFamily: fonts.text,
-    fontSize: "18px",
+    fontSize: "1.8rem",
     fontWeight: "300",
     letterSpacing: ".8px",
     background: "#fafafa",
@@ -67,8 +63,8 @@ const styles = stylex.create({
     marginTop: "8px",
     borderRadius: "5px",
     fontSize: {
-      default: "20px",
-      "@media (width <= 750px)": "18px",
+      default: "2rem",
+      "@media (width <= 750px)": "1.8rem",
     },
     fontWeight: "300",
     textAlign: "center",
@@ -79,13 +75,13 @@ const styles = stylex.create({
   thankYouShowing: {
     marginTop: "25px",
     display: "block",
-    animationName: fadeIn,
+    animationName: fadeInAndOut,
     animationDuration: "5s",
     animationFillMode: "forwards",
   },
   thankYou: {
     fontFamily: fonts.subHeading,
-    fontSize: "22px",
+    fontSize: "2.2rem",
     fontWeight: "300",
     letterSpacing: ".5px",
   },

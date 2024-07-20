@@ -6,78 +6,73 @@ import NewsletterForm from "./NewsletterForm.jsx"
 
 const styles = stylex.create({
   footer: {
-    display:'flex',
-    flexDirection:{
-      default:'row',
-      '@media (width <= 500px)':'column',
-    },
-    justifyContent: 'space-between',
-    alignItems:'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
     background: colors.darkBackground,
     fontFamily: fonts.text,
     color: colors.darkSubheading,
-    height: '15vh',
-    fontSize:'1.4rem',
+    minHeight: "15vh",
   },
-  logoContainer:{
-    display:'flex',
-    flexDirection: 'column',
-    padding: '0px 5vw',
+  logoContainer: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "0px 5vw",
   },
-  logo:{
+  logo: {
     fontFamily: fonts.brand,
-    letterSpacing:'.7px',
-    fontSize:{
-      default:'1.9rem',
-      '@media (980px < width <= 1200px )':'1.4rem',
-      '@media (800px < width <= 980px )':'1.2rem',
-      '@media (width <= 800px)':'1rem',
+    letterSpacing: ".7px",
+    fontSize: {
+      default: "3.5rem",
+      "@media (980px < width <= 1200px )": "3rem",
+      "@media (860px < width <= 980px )": "2.5rem",
+      "@media (width <= 860px)": "2.2rem",
     },
   },
-  tagline:{
+  tagline: {
     fontFamily: fonts.text,
-    alignSelf:'center',
-    fontSize:{
-      default:'1.4rem',
-      '@media (980px < width <= 1200px )':'1.2rem',
-      '@media (800px < width <= 980px )':'1rem',
-      '@media (width <= 800px)':'.8rem',
+    alignSelf: "center",
+    fontSize: {
+      default: "2.3rem",
+      "@media (980px < width <= 1200px )": "1.8rem",
+      "@media (860px < width <= 980px )": "1.6rem",
+      "@media (width <= 860px)": "1.4rem",
     },
   },
-  newsletter:{
-    padding: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-
+  newsletterSection: {
+    display:"flex",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
   },
-  newsletterText:{
-    marginBottom: '10px',
-    fontSize:{
-      default:'1.4rem',
-      '@media (980px < width <= 1200px )':'1.2rem',
-      '@media (800px < width <= 980px )':'1rem',
-      '@media (width <= 800px)':'.9rem',
+  newsletterText: {
+    marginBottom: "10px",
+    fontSize: {
+      default: "2.1rem",
+      //"@media (1200px < width )": "2rem",
+      "@media (990px < width <= 1200px )": "1.8rem",
+      "@media (850px < width <= 990px )": "1.6rem",
+      "@media (width <= 850px)": "1.4rem",
     },
   },
-  followUs:{
-    padding: '0px 5vw',
-    fontSize:{
-      default:'1.4rem',
-      '@media (980px < width <= 1200px )':'1.2rem',
-      '@media (width <= 980px )':'1rem',
+  followUs: {
+    padding: "0px 5vw",
+    fontSize: {
+      default: "2.4rem",
+      "@media (980px < width <= 1200px )": "2.2rem",
+      "@media (width <= 980px )": "1.8rem",
     },
-    textAlign: 'center',
+    textAlign: "center",
   },
-  socialIconList:{
-    margin: '5px 0px',
-    display:'flex',
-    justifyContent:'space-around',
-
+  socialIconList: {
+    margin: "5px 0px",
+    display: "flex",
+    justifyContent: "space-around",
   },
-  socialIcon:{
-    color:colors.darkSubheading,
-  }
+  socialIcon: {
+    color: colors.darkSubheading,
+  },
 });
 
 
@@ -89,17 +84,24 @@ export default function Footer() {
         <div {...stylex.props(styles.logo)}>Wisdom Weaver Coaching</div>
         <span {...stylex.props(styles.tagline)}>Catch your dreams</span>
       </div>
-      <div {...stylex.props(styles.newsletter)}><p {...stylex.props(styles.newsletterText)}>Receive more helpful insights to your inbox</p>
-        <NewsletterForm/>
+      <div {...stylex.props(styles.newsletterSection)}>
+        <span {...stylex.props(styles.newsletterText)}>
+          Receive more helpful insights to your inbox
+        </span>
+        <NewsletterForm />
       </div>
-      <div {...stylex.props(styles.followUs)}>Follow Us
+      <div {...stylex.props(styles.followUs)}>
+        Follow Us
         <div {...stylex.props(styles.socialIconList)}>
-          <a href='https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg'><FaFacebook {...stylex.props(styles.socialIcon)}/></a>
-          <a href='https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw=='><FaInstagram {...stylex.props(styles.socialIcon)}/></a>
+          <a href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg">
+            <FaFacebook {...stylex.props(styles.socialIcon)} />
+          </a>
+          <a href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw==">
+            <FaInstagram {...stylex.props(styles.socialIcon)} />
+          </a>
           {/* <FaXTwitter {...stylex.props(styles.socialIcon)}/> */}
         </div>
       </div>
-
     </div>
-  )
+  );
 }
