@@ -12,7 +12,7 @@ const fadeInAndOut = stylex.keyframes({
 
 
 const styles = stylex.create({
-  form: {
+  contactForm: {
     display: "flex",
     flexDirection: "column",
     width: "100%",
@@ -112,7 +112,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
+      <form onSubmit={handleSubmit} {...stylex.props(styles.contactForm)}>
         <div {...stylex.props(styles.formRow)}>
           <div {...stylex.props(styles.inputContainer)}>
             <label htmlFor="firstName" {...stylex.props(styles.label)}>

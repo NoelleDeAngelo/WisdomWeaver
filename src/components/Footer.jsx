@@ -7,6 +7,11 @@ import NewsletterForm from "./NewsletterForm.jsx"
 const styles = stylex.create({
   footer: {
     display: "flex",
+    flexDirection: {
+      default: "row",
+      '@media (width < 800px)':"column",
+
+    },
     justifyContent: "space-between",
     alignItems: "center",
     background: colors.darkBackground,
@@ -23,7 +28,7 @@ const styles = stylex.create({
     fontFamily: fonts.brand,
     letterSpacing: ".7px",
     fontSize: {
-      default: "3.5rem",
+      default: "3.4rem",
       "@media (980px < width <= 1200px )": "3rem",
       "@media (860px < width <= 980px )": "2.5rem",
       "@media (width <= 860px)": "2.2rem",
@@ -50,7 +55,6 @@ const styles = stylex.create({
     marginBottom: "10px",
     fontSize: {
       default: "2.1rem",
-      //"@media (1200px < width )": "2rem",
       "@media (990px < width <= 1200px )": "1.8rem",
       "@media (850px < width <= 990px )": "1.6rem",
       "@media (width <= 850px)": "1.4rem",

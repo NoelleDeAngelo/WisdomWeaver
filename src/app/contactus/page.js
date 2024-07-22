@@ -103,13 +103,15 @@ export default function ContactUs() {
           </div>
           <Link
             href="https://wisdomweavercoaching.youcanbook.me/"
+            target="_blank"
+            rel="noopener noreferrer"
             {...stylex.props(styles.link)}
           >
             Book a Free Consultaion
           </Link>
         </div>
         <div {...stylex.props(styles.sectionRight)}>
-          <ContactForm/>
+          <ContactForm />
         </div>
       </div>
     </div>

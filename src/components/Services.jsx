@@ -1,5 +1,6 @@
+
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors,fonts } from "../tokens.stylex";
 import Image from "next/image";
 
 
@@ -13,26 +14,25 @@ const styles = stylex.create({
     fontFamily: fonts.subHeading,
     fontSize: {
       default: "8rem",
-      "@media (width <= 550px)": "5rem"
+      "@media (width <= 550px)": "5rem",
     },
-    letterSpacing:'2px',
+    letterSpacing: "2px",
     color: colors.darkHeading,
     alignSelf: "center",
   },
   serviceContainer: {
     margin: "8% 5%",
     display: "flex",
-    flexDirection: {
-      default: "row",
-      "@media (width <= 850px)": "column",
+    flexDirection: "row",
+    "@media (width <= 850px)": {
+      flexDirection: "column",
     },
     justifyContent: "space-around",
     alignItems: "center",
   },
   reverse: {
-    flexDirection: {
-      default: "row",
-      "@media (width <= 850px)": "column-reverse",
+    "@media (width <= 850px)": {
+      order: 1,
     },
   },
   photo: {
@@ -65,8 +65,8 @@ export default function Services() {
   return (
     <div {...stylex.props(styles.ServicesSection)}>
       <h2 {...stylex.props(styles.sectionHeading)}>Our Services</h2>
-      <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
-        <div {...stylex.props(styles.textContainer)}>
+      <div {...stylex.props(styles.serviceContainer)}>
+        <div {...stylex.props(styles.textContainer, styles.reverse)}>
           <h3 {...stylex.props(styles.serviceHeading)}>One on One Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
             Experience the power of personalized coaching tailored to your
@@ -89,7 +89,7 @@ export default function Services() {
           src="/images/Group.jpg"
           width={480}
           height={360}
-          alt="Image of an open notebook in front of a open laptop"
+          alt="Image of a group of women talking and laughing"
         />
         <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Group Workshops</h3>
@@ -101,8 +101,8 @@ export default function Services() {
         </div>
       </div>
       <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
-        <div {...stylex.props(styles.textContainer)}>
-          <h3 {...stylex.props(styles.serviceHeading)}>Specilized Programs</h3>
+        <div {...stylex.props(styles.textContainer, styles.reverse)}>
+          <h3 {...stylex.props(styles.serviceHeading)}>Specialized Programs</h3>
           <p {...stylex.props(styles.serviceText)}>
             From career development to wellness coaching, our specialized
             programs are designed to address specific areas of focus and help
@@ -111,10 +111,10 @@ export default function Services() {
         </div>
         <Image
           {...stylex.props(styles.photo)}
-          src="/images/Specilized.jpg"
+          src="/images/Specialized.jpg"
           width={480}
           height={360}
-          alt="Image of an open notebook in front of a open laptop"
+          alt="Image of small rocks stacked in a tower"
         />
       </div>
       <div {...stylex.props(styles.serviceContainer)}>
@@ -123,7 +123,7 @@ export default function Services() {
           src="/images/Corporate.jpg"
           width={480}
           height={360}
-          alt="Image of an open notebook in front of a open laptop"
+          alt="Image of a woman giving a presentation to a group in a meeting room"
         />
         <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Corporate Coaching</h3>
