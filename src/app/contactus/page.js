@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm.jsx";
-import { colors, spacing, fonts } from "../../tokens.stylex";
+import ContactForm from "../../components/ContactForm";
+import { colors, fonts } from "../../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
@@ -37,7 +37,6 @@ const styles = stylex.create({
     margin: "15px",
     fontFamily: fonts.text,
     fontSize: "1.8rem",
-    //postion: "relative",
     color: colors.lightText,
   },
   socialIconList: {

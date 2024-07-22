@@ -1,6 +1,6 @@
 "use client";
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, fonts } from "../tokens.stylex";
 import { useState } from "react";
 
 const fadeInAndOut = stylex.keyframes({
@@ -21,7 +21,6 @@ const styles = stylex.create({
   },
   formRow: {
     display: "flex",
-    flexDirection: "row",
     flexWrap: "wrap",
     marginBottom: "16px",
   },
@@ -175,8 +174,14 @@ export default function ContactForm() {
           />
         </div>
       </form>
-      <div {...stylex.props(showing ? styles.thankYouShowing : styles.thankYouNotShowing)}>
-        <p {...stylex.props(styles.thankYou)}>Thank you. Your message has been sent.</p>
+      <div
+        {...stylex.props(
+          showing ? styles.thankYouShowing : styles.thankYouNotShowing
+        )}
+      >
+        <p {...stylex.props(styles.thankYou)}>
+          Thank you. Your message has been sent.
+        </p>
       </div>
     </div>
   );
