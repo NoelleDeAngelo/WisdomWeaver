@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
   page: {
-    minHeight:"80vh",
+    minHeight: "80vh",
     background: colors.whiteBackground,
   },
   navBackground: {
@@ -16,11 +16,14 @@ const styles = stylex.create({
     background: colors.darkBackground,
   },
   contactSection: {
-    padding: "25px 100px",
+    padding: {
+      default: "25px 100px",
+      "@media (width <= 550px)": "10px 5%",
+    },
     display: "flex",
     flexDirection: "row",
-    flexWrap:"wrap",
-    justifyContent:"space-around",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
     background: colors.whiteBackground,
   },
   sectionLeft: {
@@ -30,22 +33,26 @@ const styles = stylex.create({
   },
   heading: {
     color: colors.lightHeading,
-    fontSize: "7rem",
+    fontSize: {
+      default: "7rem",
+      "@media (width <= 390px)": "6rem",
+    },
     fontFamily: fonts.subHeading,
   },
   text: {
     margin: "15px",
     fontFamily: fonts.text,
-    fontSize: "1.8rem",
+    fontSize: {
+      default: "1.7rem",
+      "@media (width <= 390px)": "1.6rem",
+    },
     color: colors.lightText,
   },
-  socialIconList: {
-  },
+  socialIconList: {},
   socialIcon: {
     color: colors.darkButton,
     fontSize: "3rem",
     margin: "5%",
-
   },
   link: {
     display: "block",
@@ -66,13 +73,12 @@ const styles = stylex.create({
     fontWeight: "300",
     textAlign: "center",
     maxWidth: "220px",
-    //alignSelf: "center",
   },
   sectionRight: {
     display: "flex",
     justifyContent: "center",
     padding: "25px",
-    width:"40%",
+    width: "40%",
   },
 });
 
