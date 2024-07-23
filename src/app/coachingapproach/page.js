@@ -1,27 +1,54 @@
 import * as stylex from '@stylexjs/stylex';
+import { colors, fonts } from "../../tokens.stylex";
 
 const styles = stylex.create({
-  page: {
-    background: '#28595A',
-    color: '#f37353',
+  body: {
+    background: colors.lightBackground,
+    minHeight: "80vh",
   },
-  section:{
-    padding: '75px 100px',
-    display:'flex',
-    flexDirection:'column',
+  navBackground: {
+    position: "absolute",
+    height: "80px",
+    width: "100%",
+    right:"15px",
+    top: "0px",
+    zIndex:"2",
+    // background: "linear-gradient(black, 20%, transparent)",
+    //opacity:".4"
   },
-  heading:{
-    marginBottom:'20px'
+  heroContainer: {
+    position: "relative",
+    top: "-70px",
+    height: "35vh",
   },
-  text:{
-    margin:'0px',
+  heroImage: {
+    backgroundImage: "url('/images/path.jpg')",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: "100%",
+  },
+  section: {
+    padding: "75px 100px",
+    display: "flex",
+    flexDirection: "column",
+  },
+  heading: {
+    marginBottom: "20px",
+  },
+  text: {
+    margin: "0px",
   },
 });
 
 
 export default function CoachingApproach() {
   return (
-    <div {...stylex.props(styles.page)}>
+    <div {...stylex.props(styles.body)}>
+      <div {...stylex.props(styles.navBackground)}></div>
+      <div {...stylex.props(styles.heroContainer)}>
+        <div {...stylex.props(styles.heroImage)}></div>
+      </div>
       <div {...stylex.props(styles.section)}>
         <h1 {...stylex.props(styles.heading)}>Coaching Approach</h1>
         <h4 {...stylex.props(styles.text)}>

@@ -12,7 +12,7 @@ const styles = stylex.create({
   navBackground: {
     position: "relative",
     height: "70px",
-    top: "-55px",
+    top: "-70px",
     background: colors.darkBackground,
   },
   contactSection: {

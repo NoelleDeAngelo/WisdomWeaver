@@ -7,6 +7,7 @@ export const colors = stylex.defineVars({
   buttonText: { default: "#232323" },
   navHighlight: { default: "#dedede" },
   navText: { default: "#f8f5f2" },
+  navBackground: { default: "#eab5ac" },
   //Hero Section//
   heroText: { default: "#ffffff" },
   //Light Sections//
@@ -28,7 +29,7 @@ export const colors = stylex.defineVars({
   darkLinkHighlight: { default: "#078080" },
   darkButton: { default: "#e2725b" },
   darkButtonHighlight: { default: "#e78774" },
-  darkAccent:{default:"#f6f0e5"},
+  darkAccent: { default: "#f6f0e5" },
 });
 
 export const spacing = stylex.defineVars({

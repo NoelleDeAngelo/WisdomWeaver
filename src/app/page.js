@@ -19,7 +19,7 @@ const styles = stylex.create({
   },
   heroSection: {
     position: "relative",
-    top: "-55px",
+    top: "-70px",
   },
   heroText: {
     display: "flex",
