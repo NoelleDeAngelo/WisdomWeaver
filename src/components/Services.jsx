@@ -100,7 +100,7 @@ export default function Services() {
           </p>
         </div>
       </div>
-      <div {...stylex.props(styles.serviceContainer, styles.reverse)}>
+      <div {...stylex.props(styles.serviceContainer)}>
         <div {...stylex.props(styles.textContainer, styles.reverse)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Specialized Programs</h3>
           <p {...stylex.props(styles.serviceText)}>
