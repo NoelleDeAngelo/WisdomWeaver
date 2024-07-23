@@ -13,7 +13,7 @@ const styles = stylex.create({
     position: "relative",
     height: "70px",
     top: "-70px",
-    background: colors.darkBackground,
+    background: colors.navBackground,
   },
   contactSection: {
     padding: {

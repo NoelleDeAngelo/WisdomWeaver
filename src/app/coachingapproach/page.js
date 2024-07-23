@@ -6,20 +6,10 @@ const styles = stylex.create({
     background: colors.lightBackground,
     minHeight: "80vh",
   },
-  navBackground: {
-    position: "absolute",
-    height: "80px",
-    width: "100%",
-    right:"15px",
-    top: "0px",
-    zIndex:"2",
-    // background: "linear-gradient(black, 20%, transparent)",
-    //opacity:".4"
-  },
   heroContainer: {
     position: "relative",
     top: "-70px",
-    height: "35vh",
+    height: "40vh",
   },
   heroImage: {
     backgroundImage: "url('/images/path.jpg')",
@@ -45,7 +35,6 @@ const styles = stylex.create({
 export default function CoachingApproach() {
   return (
     <div {...stylex.props(styles.body)}>
-      <div {...stylex.props(styles.navBackground)}></div>
       <div {...stylex.props(styles.heroContainer)}>
         <div {...stylex.props(styles.heroImage)}></div>
       </div>

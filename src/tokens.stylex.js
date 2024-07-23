@@ -7,7 +7,7 @@ export const colors = stylex.defineVars({
   buttonText: { default: "#232323" },
   navHighlight: { default: "#dedede" },
   navText: { default: "#f8f5f2" },
-  navBackground: { default: "#eab5ac" },
+  navBackground: { default: "#416162" },
   //Hero Section//
   heroText: { default: "#ffffff" },
   //Light Sections//
