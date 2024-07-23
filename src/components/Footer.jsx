@@ -22,7 +22,7 @@ const styles = stylex.create({
   logoContainer: {
     display: "flex",
     flexDirection: "column",
-    padding: "0px 5vw",
+    padding: "10px 5vw",
   },
   logo: {
     fontFamily: fonts.brand,
