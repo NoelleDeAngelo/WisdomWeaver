@@ -3,12 +3,11 @@ import { colors, fonts } from "../../tokens.stylex";
 
 const styles = stylex.create({
   body: {
-    background: colors.lightBackground,
-    minHeight: "80vh",
-  },
-  heroContainer: {
+    minHeight: "90vh",
     position: "relative",
     top: "-70px",
+  },
+  heroContainer: {
     height: "40vh",
   },
   heroImage: {
@@ -18,16 +17,35 @@ const styles = stylex.create({
     backgroundSize: "cover",
     height: "100%",
   },
-  section: {
-    padding: "75px 100px",
+  valuesSection: {
+    padding: "75px 50px",
     display: "flex",
-    flexDirection: "column",
+    background: colors.darkBackground,
+    justifyContent: "space-evenly",
+    flexWrap: "wrap",
   },
-  heading: {
-    marginBottom: "20px",
+  valueHeading: {
+    fontFamily: fonts.subHeading,
+    letterSpacing: "2px",
+    color: colors.darkSubheading,
+    fontSize: {
+      default: "5.5rem",
+      "@media (width <= 490px)": "4rem",
+    },
+    margin: "50px",
+    alignSelf: "center",
   },
-  text: {
-    margin: "0px",
+  valueText: {
+    fontFamily: fonts.text,
+    color: colors.darkText,
+    fontSize: {
+      default: "1.8rem",
+      //"@media (width <= 1200px)": "1.6rem",
+    },
+    fontWeight: "400",
+    maxWidth: "650px",
+    minWidth:"320px",
+    flex: "2 0",
   },
 });
 
@@ -38,10 +56,10 @@ export default function CoachingApproach() {
       <div {...stylex.props(styles.heroContainer)}>
         <div {...stylex.props(styles.heroImage)}></div>
       </div>
-      <div {...stylex.props(styles.section)}>
-        <h1 {...stylex.props(styles.heading)}>Coaching Approach</h1>
-        <h4 {...stylex.props(styles.text)}>
-          Welcome to Wisdom Weaver Coaching! Our approach to transformational
+      <div {...stylex.props(styles.valuesSection)}>
+        <h1 {...stylex.props(styles.valueHeading)}>Our Values</h1>
+        <h4 {...stylex.props(styles.valueText)}>
+          Our approach to transformational
           coaching is deeply rooted in the belief that every individual
           possesses the power to unlock their full potential and lead a
           fulfilling life. We understand that personal growth is a journey, and
