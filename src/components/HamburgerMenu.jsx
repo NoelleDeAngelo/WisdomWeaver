@@ -13,7 +13,7 @@ const styles = stylex.create({
       default:'none',
       '@media (width <= 800px)': 'flex',
     },
-    padding: '5px 10px',
+    padding: '5px 20px',
     fontSize: '3.5rem',
   },
   menu:{
