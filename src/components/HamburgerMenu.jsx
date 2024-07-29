@@ -68,7 +68,7 @@ export default function HamburgerMenu() {
         <Link href='/coachingapproach'onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Approach</Link>
         {/* <Link href='/blog' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Blog</Link> */}
         <Link href='/ContactUs' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Contact Us</Link>
-        <Link href='/resources' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Resources</Link>
+        {/* <Link href='/resources' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Resources</Link> */}
       </div>
     </div>
 

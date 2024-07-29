@@ -76,6 +76,9 @@ export default function CoachingApproach() {
           together and unlock the extraordinary potential that lies within you.
         </h4>
       </div>
+      <div>
+        Accredidation
+      </div>
     </div>
   );
 }
