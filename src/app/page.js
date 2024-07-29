@@ -30,7 +30,7 @@ const styles = stylex.create({
     minHeight: "275px",
     justifyContent: "center",
     padding: {
-      default: "10vh 10vw",
+      default: "100px 10vw",
     },
     minWidth: "200px",
   },
@@ -41,6 +41,7 @@ const styles = stylex.create({
     backgroundSize: "cover",
   },
   heroHeader: {
+    margin:"0",
     fontFamily: fonts.heading,
     fontWeight: "500",
     letterSpacing: ".6px",
