@@ -13,13 +13,12 @@ const styles = stylex.create({
     fontFamily: fonts.text,
     padding: 0,
     margin: 0,
-    //minHeight: "80vh",
     display: "flex ",
     flexDirection: "column",
+    position:"relative",
+    marginTop: "-70px",
   },
   heroSection: {
-    position: "relative",
-    top: "-70px",
   },
   heroText: {
     display: "flex",
@@ -41,7 +40,7 @@ const styles = stylex.create({
     backgroundSize: "cover",
   },
   heroHeader: {
-    margin:"0",
+    margin: "0",
     fontFamily: fonts.heading,
     fontWeight: "500",
     letterSpacing: ".6px",

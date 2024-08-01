@@ -15,35 +15,35 @@ const styles = stylex.create({
     alignItems: "center",
     justifyContent: "center",
     background: colors.lightBackground,
-    minHeight: "250px",
+    minHeight: "300px",
   },
   aboutImage: {
     borderRadius: "50%",
     position: "relative",
     left: {
-      default: "50%",
-      "@media (width <= 799px)": "0px",
+      default: "48%",
+      "@media (width < 950px)": "0px",
     },
     outline: "6px solid",
     outlineColor: colors.lightAccent,
     outlineOffset: "4px",
     width: {
-      default: "275px",
-      "@media (850px < width <= 950px)": "250px",
-      "@media (width <= 850px)": "200px",
+      default: "375px",
+      "@media (975px < width <= 1350px)": "275px",
+      "@media (width <= 975px)": "250px",
     },
     height: {
-      default: "275px",
-      "@media (850px < width <= 950px)": "250px",
-      "@media (width <= 850px)": "200px",
+      default: "375px",
+      "@media (975px < width <= 1350px)": "275px",
+      "@media (width <= 975px)": "250px",
     },
   },
   about: {
     display: "flex",
     flexDirection: "column",
     background: "white",
-    flex: "3 1 600px",
-    paddingBottom:'20px',
+    flex: "3 1 700px",
+    paddingBottom: "20px",
     justifyContent: "center",
     alignItems: {
       default: null,
@@ -54,28 +54,24 @@ const styles = stylex.create({
     fontFamily: fonts.subHeading,
     color: colors.lightHeading,
     marginLeft: {
-      default: "22%",
-      "@media (799px < width <= 9500px)": "15%",
-      "@media (width <= 799px)": "0",
+      default: "20%",
+      "@media (width <= 950px)": "0",
     },
-    marginBottom: "0",
+    marginBottom: "5",
+    marginTop:"45px",
     fontSize: "4.5rem",
   },
   aboutText: {
     color: colors.lightText,
     fontSize: "2.2rem",
-    marginTop: "10px",
-    marginBottom: "10px",
+    marginTop: "0px",
+    marginBottom: "15px",
     marginRight: "10%",
     marginLeft: {
       default: "25%",
-      "@media (width <= 799px)": "10%",
+      "@media (width <= 665px)": "10%",
     },
     maxWidth: "700px",
-    textAlign: {
-      default: "left",
-      "@media (width <= 950px)": "center",
-    },
   },
 });
 
@@ -86,8 +82,8 @@ export default function About() {
         <Image
           {...stylex.props(styles.aboutImage)}
           src="/images/Araceli.png"
-          width={275}
-          height={275}
+          width={375}
+          height={375}
           alt="Image of the founder of Wisdom Weaver Coaching"
         />
       </div>
