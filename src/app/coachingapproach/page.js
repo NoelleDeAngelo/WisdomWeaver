@@ -5,10 +5,10 @@ const styles = stylex.create({
   body: {
     minHeight: "90vh",
     position: "relative",
-    top: "-70px",
+    marginTop: "-70px",
   },
   heroContainer: {
-    height: "40vh",
+    height: "50vh",
   },
   heroImage: {
     backgroundImage: "url('/images/path.jpg')",
@@ -22,6 +22,7 @@ const styles = stylex.create({
     display: "flex",
     background: colors.darkBackground,
     justifyContent: "space-evenly",
+    alignItems: "center",
     flexWrap: "wrap",
   },
   valueHeading: {
@@ -29,22 +30,27 @@ const styles = stylex.create({
     letterSpacing: "2px",
     color: colors.darkSubheading,
     fontSize: {
-      default: "5.5rem",
-      "@media (width <= 490px)": "4rem",
+      default: "7.5rem",
+      "@media (width <= 490px)": "6rem",
     },
-    margin: "50px",
-    alignSelf: "center",
+    margin: {
+      default: "50px",
+      "@media (width <= 590px)": "10px",
+    },
   },
   valueText: {
     fontFamily: fonts.text,
     color: colors.darkText,
     fontSize: {
-      default: "1.8rem",
-      //"@media (width <= 1200px)": "1.6rem",
+      default: "2.3rem",
+      "@media (width <= 550px)": "1.9rem",
     },
     fontWeight: "400",
     maxWidth: "650px",
-    minWidth:"320px",
+    minWidth: {
+      default: "500px",
+      "@media (width <= 590px)": "300px",
+    },
     flex: "2 0",
   },
 });
@@ -57,28 +63,24 @@ export default function CoachingApproach() {
         <div {...stylex.props(styles.heroImage)}></div>
       </div>
       <div {...stylex.props(styles.valuesSection)}>
-        <h1 {...stylex.props(styles.valueHeading)}>Our Values</h1>
+        <h1 {...stylex.props(styles.valueHeading)}>Approach</h1>
         <h4 {...stylex.props(styles.valueText)}>
-          Our approach to transformational
-          coaching is deeply rooted in the belief that every individual
-          possesses the power to unlock their full potential and lead a
-          fulfilling life. We understand that personal growth is a journey, and
-          our coaching methodology is designed to empower you every step of the
-          way. Our approach combines a blend of proven coaching techniques,
-          personalized strategies, and compassionate guidance to support you in
-          overcoming obstacles, discovering your strengths, and achieving your
-          goals. We believe in fostering a supportive and non-judgmental
-          environment where you can explore new possibilities, gain clarity, and
-          create lasting positive change. Whether you&apos;re seeking to enhance
-          your career, improve relationships, or cultivate a greater sense of
-          purpose, our coaching approach is tailored to meet your unique needs
-          and aspirations. Let&apos;s embark on this transformative journey
-          together and unlock the extraordinary potential that lies within you.
+          Rooted in the transformative principles of Sydney Banks and the
+          Positive Intelligence framework by Shirzad Chamine, my coaching
+          approach emphasizes the importance of understanding the Three
+          Principles—Mind, Consciousness, and Thought. This foundational
+          knowledge helps you recognize how your perception of reality is
+          shaped, empowering you to access your natural state of well-being.
+          Complementing this, I integrate Positive Intelligence techniques to
+          build mental strength. By identifying and mitigating Saboteurs—those
+          self-limiting thought patterns—we work together to activate your Sage,
+          a mindset that fosters positivity, emotional intelligence, and
+          resilience in the face of life&apos;s challenges.
         </h4>
       </div>
-      <div>
+      {/* <div>
         Accredidation
-      </div>
+      </div> */}
     </div>
   );
 }
