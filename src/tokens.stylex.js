@@ -14,7 +14,7 @@ export const colors = stylex.defineVars({
   lightBackground: { default: "#f6f0e5" },
   whiteBackground: { default: "#ffffff" },
   lightHeading: { default: "#b26429" },
-  lightSubheading: { default: "#e2725b" },
+  lightSubheading: { default: "#dc967f" },
   lightText: { default: "#234649" },
   lightLink: { default: "#b26429" },
   lightLinkHighlight: { default: "#078080" },

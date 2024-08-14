@@ -1,4 +1,4 @@
-import * as stylex from '@stylexjs/stylex';
+import * as stylex from "@stylexjs/stylex";
 import { colors, fonts } from "../../tokens.stylex";
 
 const styles = stylex.create({
@@ -20,12 +20,54 @@ const styles = stylex.create({
   valuesSection: {
     padding: "75px 50px",
     display: "flex",
+    flexDirection: "column",
+    background: colors.lightBackground,
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexWrap: "wrap",
+  },
+  valuesSectionHeading: {
+    fontFamily: fonts.subHeading,
+    letterSpacing: "2px",
+    color: colors.lightHeading,
+    fontSize: {
+      default: "7.5rem",
+      "@media (width <= 490px)": "6rem",
+    },
+    margin:"10px"
+  },
+  valuesContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    width: "95%",
+  },
+  valueContainer: {
+    listStyleType: "none",
+    maxWidth: "275px",
+    textAlign:"center",
+  },
+  valueHeading: {
+    fontFamily: fonts.subHeading,
+    fontSize: "3.6rem",
+    letterSpacing: ".4px",
+    color: colors.lightSubheading,
+  },
+  valueText: {
+    fontFamily: fonts.text,
+    color: colors.lightText,
+    fontSize: "1.8rem",
+  },
+  approachSection: {
+    padding: "75px 50px",
+    display: "flex",
     background: colors.darkBackground,
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
   },
-  valueHeading: {
+  approachHeading: {
     fontFamily: fonts.subHeading,
     letterSpacing: "2px",
     color: colors.darkSubheading,
@@ -38,7 +80,7 @@ const styles = stylex.create({
       "@media (width <= 590px)": "10px",
     },
   },
-  valueText: {
+  approachText: {
     fontFamily: fonts.text,
     color: colors.darkText,
     fontSize: {
@@ -55,7 +97,6 @@ const styles = stylex.create({
   },
 });
 
-
 export default function CoachingApproach() {
   return (
     <div {...stylex.props(styles.body)}>
@@ -63,8 +104,43 @@ export default function CoachingApproach() {
         <div {...stylex.props(styles.heroImage)}></div>
       </div>
       <div {...stylex.props(styles.valuesSection)}>
-        <h1 {...stylex.props(styles.valueHeading)}>Approach</h1>
-        <h4 {...stylex.props(styles.valueText)}>
+        <h1 {...stylex.props(styles.valuesSectionHeading)}>Values</h1>
+        <ul {...stylex.props(styles.valuesContainer)}>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Authenticity</h2>
+            <p {...stylex.props(styles.valueText)}>
+              Being true to oneself and honoring individual journeys.
+            </p>
+          </li>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Resilience</h2>
+            <p {...stylex.props(styles.valueText)}>
+              Strength and adaptability in overcoming challenges.
+            </p>
+          </li>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Well-Being</h2>
+            <p {...stylex.props(styles.valueText)}>
+              A balanced approach to mental, emotional, and physical health.
+            </p>
+          </li>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Connection</h2>
+            <p {...stylex.props(styles.valueText)}>
+              Meaningful relationships and a sense of community.
+            </p>
+          </li>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Cultural Wisdom</h2>
+            <p {...stylex.props(styles.valueText)}>
+              Drawing inspiration from diverse cultural teachings.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div {...stylex.props(styles.approachSection)}>
+        <h1 {...stylex.props(styles.approachHeading)}>Approach</h1>
+        <h4 {...stylex.props(styles.approachText)}>
           Rooted in the transformative principles of Sydney Banks and the
           Positive Intelligence framework by Shirzad Chamine, my coaching
           approach emphasizes the importance of understanding the Three
