@@ -4,10 +4,10 @@ import { colors, fonts } from "../tokens.stylex";
 const styles = stylex.create({
 
   Section: {
-    padding: "75px 50px",
+    padding: "50px 50px 100px",
     display: "flex",
     flexDirection: "column",
-    background: colors.lightBackground,
+    background: colors.darkBackground,
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
@@ -15,10 +15,9 @@ const styles = stylex.create({
   sectionHeading: {
     fontFamily: fonts.subHeading,
     letterSpacing: "2px",
-    color: colors.lightHeading,
+    color: colors.darkHeading,
     fontSize: {
       default: "7.5rem",
-      "@media (width <= 490px)": "6rem",
     },
     margin: "10px",
   },
@@ -27,22 +26,25 @@ const styles = stylex.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    width: "95%",
+    width: "100%",
+    padding: "0",
   },
   valueContainer: {
     listStyleType: "none",
     maxWidth: "275px",
     textAlign: "center",
+    margin:"5px",
   },
   valueHeading: {
     fontFamily: fonts.subHeading,
-    fontSize: "3.6rem",
-    letterSpacing: ".4px",
-    color: colors.lightSubheading,
+    fontSize: "3.4rem",
+    fontWeight:"400",
+    letterSpacing: ".5px",
+    color: colors.darkSubheading,
   },
   valueText: {
     fontFamily: fonts.text,
-    color: colors.lightText,
+    color: colors.darkText,
     fontSize: "1.8rem",
   },
 });
@@ -59,17 +61,17 @@ export default function Values() {
             </p>
           </li>
           <li {...stylex.props(styles.valueContainer)}>
-            <h2 {...stylex.props(styles.valueHeading)}>Resilience</h2>
-            <p {...stylex.props(styles.valueText)}>
-              Strength and adaptability in overcoming challenges.
-            </p>
-          </li>
-          <li {...stylex.props(styles.valueContainer)}>
             <h2 {...stylex.props(styles.valueHeading)}>Well-Being</h2>
             <p {...stylex.props(styles.valueText)}>
               A balanced approach to mental, emotional, and physical health.
             </p>
           </li>
+          <li {...stylex.props(styles.valueContainer)}>
+            <h2 {...stylex.props(styles.valueHeading)}>Resilience</h2>
+            <p {...stylex.props(styles.valueText)}>
+              Strength and adaptability in overcoming challenges.
+            </p>
+        </li>
           <li {...stylex.props(styles.valueContainer)}>
             <h2 {...stylex.props(styles.valueHeading)}>Connection</h2>
             <p {...stylex.props(styles.valueText)}>

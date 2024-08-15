@@ -10,7 +10,7 @@ const styles = stylex.create({
     marginTop: "-70px",
   },
   heroContainer: {
-    height: "50vh",
+    height: "40vh",
   },
   heroImage: {
     backgroundImage: "url('/images/path.jpg')",

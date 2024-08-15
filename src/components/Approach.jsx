@@ -6,7 +6,7 @@ const styles = stylex.create({
   approachSection: {
     padding: "75px 50px",
     display: "flex",
-    background: colors.darkBackground,
+    background: colors.lightBackground,
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
@@ -14,7 +14,7 @@ const styles = stylex.create({
   approachHeading: {
     fontFamily: fonts.subHeading,
     letterSpacing: "2px",
-    color: colors.darkSubheading,
+    color: colors.lightHeading,
     fontSize: {
       default: "7.5rem",
       "@media (width <= 490px)": "6rem",
@@ -26,7 +26,7 @@ const styles = stylex.create({
   },
   approachText: {
     fontFamily: fonts.text,
-    color: colors.darkText,
+    color: colors.lightText,
     fontSize: {
       default: "2.3rem",
       "@media (width <= 550px)": "1.9rem",
