@@ -64,15 +64,14 @@ const styles = stylex.create({
 export default function Services() {
   return (
     <div {...stylex.props(styles.ServicesSection)}>
-      <h2 {...stylex.props(styles.sectionHeading)}>Our Services</h2>
+      <h2 {...stylex.props(styles.sectionHeading)}>Services</h2>
       <div {...stylex.props(styles.serviceContainer)}>
         <div {...stylex.props(styles.textContainer, styles.reverse)}>
           <h3 {...stylex.props(styles.serviceHeading)}>One on One Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
-            Experience the power of personalized coaching tailored to your
-            specific goals and aspirations. Work closely with a Wisdom Weaver
-            coach to gain clarity, overcome challenges, and achieve meaningful
-            results.
+            Experience the transformative power of coaching tailored
+            specifically to your unique journey. Gain deeper insights, navigate
+            challenges, and create meaningful, lasting change in your life.
           </p>
         </div>
         <Image
@@ -94,9 +93,9 @@ export default function Services() {
         <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Group Workshops</h3>
           <p {...stylex.props(styles.serviceText)}>
-            Join a supportive community of like-minded individuals and
-            participate in engaging workshops designed to foster personal
-            growth, enhance skills, and promote positive change.
+            Join a supportive network of individuals who share a drive for
+            personal development. Participate in enriching workshops that foster
+            growth, enhance skills, and inspire positive transformation.
           </p>
         </div>
       </div>
@@ -104,9 +103,10 @@ export default function Services() {
         <div {...stylex.props(styles.textContainer, styles.reverse)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Specialized Programs</h3>
           <p {...stylex.props(styles.serviceText)}>
-            From career development to wellness coaching, our specialized
-            programs are designed to address specific areas of focus and help
-            you achieve your objectives with clarity and confidence.
+            From career development and wellness to mindset transformation and
+            personal growth, our programs are crafted to address specific areas
+            of focus, helping you achieve your objectives with clarity and
+            confidence.
           </p>
         </div>
         <Image
@@ -128,8 +128,8 @@ export default function Services() {
         <div {...stylex.props(styles.textContainer)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Corporate Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
-            Elevate team performance, enhance leadership skills, and cultivate a
-            culture of success within your organization with our customized
+            Enhance team performance, develop leadership skills, and foster a
+            culture of success within your organization through tailored
             corporate coaching programs.
           </p>
         </div>
