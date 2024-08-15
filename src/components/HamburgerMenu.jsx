@@ -90,7 +90,7 @@ export default function HamburgerMenu() {
         </Link>
         {/* <Link href='/blog' onClick= {()=> {setMenuOpen(!menuOpen)}} {...stylex.props(styles.hamLink)}>Blog</Link> */}
         <Link
-          href="/ContactUs"
+          href="/contactus"
           onClick={() => {
             setMenuOpen(!menuOpen);
           }}
