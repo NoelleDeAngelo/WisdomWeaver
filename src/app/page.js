@@ -82,6 +82,8 @@ export default function Home() {
             </h1>
             <Link
               href="https://wisdomweavercoaching.youcanbook.me/"
+              target="_blank"
+              rel="noopener noreferrer"
               {...stylex.props(styles.heroLink)}
             >
               Get Started
