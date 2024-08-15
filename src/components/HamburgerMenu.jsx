@@ -24,13 +24,14 @@ const styles = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute',
-    right:'15px',
+    right:'30px',
   },
   hamLink: {
     alignItems: 'center',
     textDecoration:'none',
-    padding:spacing.medium,
-    fontFamily: fonts.text,
+    padding:"12px",
+    fontFamily: fonts.Subheading,
+    fontSize:"2rem",
     color:
       {
         default: colors.lightText,
