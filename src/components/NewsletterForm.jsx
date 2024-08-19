@@ -1,13 +1,22 @@
-'use client'
-import * as stylex from '@stylexjs/stylex';
-import {colors,spacing,fonts} from '../tokens.stylex';
-import { useState } from 'react';
+"use client";
+import * as stylex from "@stylexjs/stylex";
+import { colors, spacing, fonts } from "../tokens.stylex";
+import { useState } from "react";
 
+const fadeIn = stylex.keyframes({
+  "0%": { opacity: 0 },
+  "100%": { opacity: 1 },
+});
+
+const fadeOut = stylex.keyframes({
+  "0%": { opacity: 1 },
+  "100%": { opacity: 0 },
+});
 
 const styles = stylex.create({
-  form: {
+  section: {
     display: "flex",
-    width:"100%",
+    width: "100%",
   },
   input: {
     flex: "3 3",
@@ -35,38 +44,83 @@ const styles = stylex.create({
     border: "none",
     cursor: "pointer",
     ":hover": {
-      backgroundColor: "#006666",
+      backgroundColor: colors.darkButtonHighlight,
     },
     transition: "background-color .3s ease",
   },
+  thankYou: {
+    fontFamily: fonts.text,
+    fontSize: "2rem",
+    color:colors.darkText,
+  },
+  showing: {
+    display: "flex",
+    width: "100%",
+  },
+  notShowing: {
+    display: "none",
+    animationName: fadeOut,
+    animationDuration: "1.5s",
+    animationFillMode: "forwards",
+  },
+  fadeIn: {
+    animationName: fadeIn,
+    animationDuration: "1.5s",
+    animationFillMode: "forwards",
+  },
 });
 
+export default function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-
-export default function NewsletterForm(){
-  const [email, setEmail]= useState("");
-
-  const handleSubmit= async (e)=> {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch('/api/newsletter', {
-      method:'POST',
-      body: JSON.stringify({'email':email})
-    })
-  }
+    const res = await fetch("/api/newsletter", {
+      method: "POST",
+      body: JSON.stringify({ email: email }),
+    });
+    if (res.status === 200) {
+      e.target.reset();
+      setSubscribed(true);
+      setLoading(false);
+      setTimeout(() => {
+        setSubscribed(false);
+      }, 6000);
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
+  };
   return (
-    <form onSubmit={handleSubmit} {...stylex.props(styles.form)}>
-      <input
-        type="email"
-        placeholder="E-mail"
-        required
-        {...stylex.props(styles.input)}
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      ></input>
-      <button {...stylex.props(styles.button)}>Subscribe</button>
-    </form>
+    <div {...stylex.props(styles.section)}>
+      <form
+        onSubmit={handleSubmit}
+        {...stylex.props(
+          subscribed ? styles.notShowing : styles.showing,
+          !loading ? styles.fadeIn : null
+        )}
+      >
+        <input
+          type="email"
+          placeholder="E-mail"
+          required
+          {...stylex.props(styles.input)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        ></input>
+        <button {...stylex.props(styles.button)}>Subscribe</button>
+      </form>
+      <span
+        {...stylex.props(
+          subscribed ? styles.showing : styles.notShowing,
+          styles.thankYou,
+          styles.fadeIn
+        )}
+      >
+        Welcome! Get ready for inspiring tips!
+      </span>
+    </div>
   );
 }
-
-
