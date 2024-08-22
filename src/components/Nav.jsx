@@ -19,6 +19,8 @@ const styles = stylex.create({
     background: "linear-gradient(black, 25%, transparent)",
   },
   brandName: {
+    color: colors.navText,
+    textDecoration:"none",
     fontFamily: fonts.brand,
     fontSize: {
       default: "4rem",
@@ -57,15 +59,23 @@ const styles = stylex.create({
 export default function Nav() {
   return (
     <div {...stylex.props(styles.navBar)}>
-      <div {...stylex.props(styles.brandName)}>Wisdom Weaver Coaching</div>
+      <Link href="/" {...stylex.props(styles.brandName)}>
+        Wisdom Weaver Coaching
+      </Link>
       <HamburgerMenu />
       <div {...stylex.props(styles.linkList)}>
-      <Link href='/' {...stylex.props(styles.link)}>Home</Link>
-      <Link href='/coachingapproach' {...stylex.props(styles.link)}>Approach</Link>
-      {/* <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link> */}
-      <Link href='/contactus' {...stylex.props(styles.link)}>Contact Us</Link>
-      {/* <Link href='/resources' {...stylex.props(styles.link)}>Resources</Link> */}
+        <Link href="/" {...stylex.props(styles.link)}>
+          Home
+        </Link>
+        <Link href="/coachingapproach" {...stylex.props(styles.link)}>
+          Approach
+        </Link>
+        {/* <Link href='/blog' {...stylex.props(styles.link)}>Blog</Link> */}
+        <Link href="/contactus" {...stylex.props(styles.link)}>
+          Contact Us
+        </Link>
+        {/* <Link href='/resources' {...stylex.props(styles.link)}>Resources</Link> */}
       </div>
     </div>
-  )
+  );
 }
