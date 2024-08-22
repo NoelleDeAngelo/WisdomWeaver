@@ -1,7 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import {colors,spacing,fonts} from "../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import NewsletterForm from "./NewsletterForm.jsx"
 
 const styles = stylex.create({
@@ -97,13 +96,20 @@ export default function Footer() {
       <div {...stylex.props(styles.followUs)}>
         Follow Us
         <div {...stylex.props(styles.socialIconList)}>
-          <a href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg">
+          <a
+            href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebook {...stylex.props(styles.socialIcon)} />
           </a>
-          <a href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw==">
+          <a
+            href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram {...stylex.props(styles.socialIcon)} />
           </a>
-          {/* <FaXTwitter {...stylex.props(styles.socialIcon)}/> */}
         </div>
       </div>
     </div>

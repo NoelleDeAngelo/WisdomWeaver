@@ -99,10 +99,18 @@ export default function ContactUs() {
             (408)-540-8109
           </h4>
           <div {...stylex.props(styles.socialIconList)}>
-            <a href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg">
+            <a
+              href="https://www.facebook.com/share/yJDKhqvUKAZXQGHu/?mibextid=qi2Omg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook {...stylex.props(styles.socialIcon)} />
             </a>
-            <a href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw==">
+            <a
+              href="https://www.instagram.com/wisdomweavercoaching?igsh=MTZzOG5iMm9qc3dubw=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram {...stylex.props(styles.socialIcon)} />
             </a>
           </div>
