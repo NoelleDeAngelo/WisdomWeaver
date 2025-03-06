@@ -96,7 +96,7 @@ export default function ContactUs() {
             Araceli@wisdomweavercoaching.com
             <br></br>
             <br></br>
-            (408)-540-8109
+            (808)-865-1002
           </h4>
           <div {...stylex.props(styles.socialIconList)}>
             <a
