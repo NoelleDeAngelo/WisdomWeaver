@@ -49,3 +49,8 @@ export const fonts = stylex.defineVars({
   subHeading: '"Cormorant"',
   text: "Nunito",
 });
+
+export const shadows = stylex.defineVars({
+  light: "2px 1px 1px rgba(0, 0, 0, 0.08)",
+  medium: "4px 2px 3px rgba(0, 0, 0, 0.18)",
+});

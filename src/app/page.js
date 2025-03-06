@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import Nav from "../components/Nav.jsx";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, spacing, fonts, shadows } from "../tokens.stylex";
 import Link from "next/link";
 import About from "../components/About.jsx";
 import Services from "../components/Services.jsx";
@@ -15,23 +15,24 @@ const styles = stylex.create({
     margin: 0,
     display: "flex ",
     flexDirection: "column",
-    position:"relative",
+    position: "relative",
     marginTop: "-70px",
   },
-  heroSection: {
-  },
+  heroSection: {},
   heroText: {
     display: "flex",
     color: colors.heroText,
     alignItems: "center",
     flexDirection: "column",
-    height: "80vh",
+    height: "75vh",
     minHeight: "275px",
     justifyContent: "center",
     padding: {
       default: "100px 10vw",
     },
+    justifySelf: "center",
     minWidth: "200px",
+    maxWidth: "1100px",
   },
   heroImage: {
     backgroundImage: "url('/images/sunsetman.jpg')",
@@ -41,12 +42,17 @@ const styles = stylex.create({
   },
   heroHeader: {
     margin: "0",
+    paddingTop: {
+      default: "150px",
+      "@media (width <= 900px)": null,
+    },
     fontFamily: fonts.heading,
     fontWeight: "500",
     letterSpacing: ".6px",
+    textShadow: shadows.medium,
     textAlign: "center",
     fontSize: {
-      default: "6rem",
+      default: "7.5rem",
       "@media (455px< width <= 865px)": "5rem",
       "@media (width <= 455px)": "4rem",
     },

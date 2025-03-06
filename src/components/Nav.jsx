@@ -1,5 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
-import {colors,spacing,fonts} from '../tokens.stylex';
+import {colors,spacing,fonts,shadows} from '../tokens.stylex';
 import Link from 'next/link';
 import HamburgerMenu from './HamburgerMenu.jsx';
 
@@ -20,14 +20,16 @@ const styles = stylex.create({
   },
   brandName: {
     color: colors.navText,
-    textDecoration:"none",
+    textDecoration: "none",
+    textShadow: shadows.medium,
     fontFamily: fonts.brand,
     fontSize: {
-      default: "4rem",
+      default: "5rem",
       "@media (450px < width <= 1000px )": "3.5rem",
       "@media (width <= 450px)": "2.5rem",
     },
     margin: spacing.medium,
+    paddingTop: "20px",
     letterSpacing: ".7px",
   },
   linkList: {
@@ -42,15 +44,21 @@ const styles = stylex.create({
   link: {
     alignItems: "center",
     textDecoration: "none",
-    padding: "0vw .7vw",
-    fontFamily: fonts.text,
+    textShadow: shadows.medium,
+    padding: "0vw 1vw",
+    fontFamily: fonts.heading,
+    fontWeight: "100",
     fontSize: {
-      default: "2.2rem",
+      default: "2.4rem",
       "@media (width <= 1000px)": "1.8rem",
     },
     color: {
       default: colors.navText,
       ":hover": colors.navHighlight,
+    },
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
     },
   },
 });

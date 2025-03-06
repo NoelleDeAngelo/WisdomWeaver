@@ -1,39 +1,58 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, spacing, fonts, shadows } from "../tokens.stylex";
 import Image from "next/image";
-
 
 const styles = stylex.create({
   aboutSection: {
+    position: "relative",
     display: "flex",
+    justifyContent: "center",
     flexFlow: "row wrap",
     minHeight: "450px",
+    padding: "75px",
+    background: colors.whiteBackground,
+  },
+  aboutAccentBlock: {
+    background: colors.lightBackground,
+    width: {
+      default: "25%",
+      "@media (width < 1125px)": "0vw",
+    },
+    height: "100%",
+    position: "absolute",
+    top: "0px",
+    left: "0px",
   },
   aboutImageContainer: {
     display: "flex",
     flex: "1 0 100px",
     alignItems: "center",
     justifyContent: "center",
-    background: colors.lightBackground,
     minHeight: "300px",
   },
   aboutImage: {
     borderRadius: "50%",
     position: "relative",
     left: {
-      default: "48%",
+      default: "10vw",
+      "@media (width < 1125px)": "0px",
+    },
+    top: {
+      default: "25px",
       "@media (width < 950px)": "0px",
     },
+    alignSelf: "center",
+    justifySelf: "center",
     outline: "6px solid",
     outlineColor: colors.lightAccent,
     outlineOffset: "4px",
     width: {
-      default: "375px",
+      default: "400px",
       "@media (975px < width <= 1350px)": "275px",
       "@media (width <= 975px)": "250px",
     },
     height: {
-      default: "375px",
+      default: "400px",
       "@media (975px < width <= 1350px)": "275px",
       "@media (width <= 975px)": "250px",
     },
@@ -41,7 +60,6 @@ const styles = stylex.create({
   about: {
     display: "flex",
     flexDirection: "column",
-    background: "white",
     flex: "3 1 700px",
     paddingBottom: "20px",
     justifyContent: "center",
@@ -53,13 +71,14 @@ const styles = stylex.create({
   aboutHeading: {
     fontFamily: fonts.subHeading,
     color: colors.lightHeading,
+    textShadow: shadows.light,
     marginLeft: {
       default: "20%",
       "@media (width <= 950px)": "0",
     },
     marginBottom: "5",
-    marginTop:"45px",
-    fontSize: "4.5rem",
+    marginTop: "45px",
+    fontSize: "7rem",
   },
   aboutText: {
     color: colors.lightText,
@@ -78,15 +97,14 @@ const styles = stylex.create({
 export default function About() {
   return (
     <div {...stylex.props(styles.aboutSection)}>
-      <div {...stylex.props(styles.aboutImageContainer)}>
-        <Image
-          {...stylex.props(styles.aboutImage)}
-          src="/images/Araceli.png"
-          width={375}
-          height={375}
-          alt="Image of the founder of Wisdom Weaver Coaching"
-        />
-      </div>
+      <div {...stylex.props(styles.aboutAccentBlock)}></div>
+      <Image
+        {...stylex.props(styles.aboutImage)}
+        src="/images/Araceli.png"
+        width={375}
+        height={375}
+        alt="Image of the founder of Wisdom Weaver Coaching"
+      />
       <div {...stylex.props(styles.about)}>
         <h2 {...stylex.props(styles.aboutHeading)}>Who I Am</h2>
         <p {...stylex.props(styles.aboutText)}>
