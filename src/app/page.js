@@ -44,7 +44,8 @@ const styles = stylex.create({
     margin: "0",
     paddingTop: {
       default: "150px",
-      "@media (width <= 900px)": null,
+      "@media (900 < width <= 2000px)": "10px",
+      "@media (width <= 900px)": "10px",
     },
     fontFamily: fonts.heading,
     fontWeight: "500",
@@ -53,6 +54,7 @@ const styles = stylex.create({
     textAlign: "center",
     fontSize: {
       default: "7.5rem",
+      "@media (865px< width <= 1200px)": "6rem",
       "@media (455px< width <= 865px)": "5rem",
       "@media (width <= 455px)": "4rem",
     },

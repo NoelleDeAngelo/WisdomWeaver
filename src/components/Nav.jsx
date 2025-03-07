@@ -49,7 +49,7 @@ const styles = stylex.create({
     fontFamily: fonts.heading,
     fontWeight: "100",
     fontSize: {
-      default: "2.4rem",
+      default: "2.8rem",
       "@media (width <= 1000px)": "1.8rem",
     },
     color: {

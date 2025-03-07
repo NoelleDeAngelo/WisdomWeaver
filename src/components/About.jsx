@@ -9,16 +9,22 @@ const styles = stylex.create({
     justifyContent: "center",
     flexFlow: "row wrap",
     minHeight: "450px",
-    padding: "75px",
+    padding: {
+      default: "75px",
+      "@media (width < 1125px)": "25px 0px",
+    },
     background: colors.whiteBackground,
   },
   aboutAccentBlock: {
     background: colors.lightBackground,
     width: {
       default: "25%",
-      "@media (width < 1125px)": "0vw",
+      "@media (width < 950px)": "100%",
     },
-    height: "100%",
+    height: {
+      default: "100%",
+      "@media (width < 950px)": "325px",
+    },
     position: "absolute",
     top: "0px",
     left: "0px",
@@ -35,7 +41,7 @@ const styles = stylex.create({
     position: "relative",
     left: {
       default: "10vw",
-      "@media (width < 1125px)": "0px",
+      "@media (width < 950px)": "0px",
     },
     top: {
       default: "25px",
@@ -77,18 +83,21 @@ const styles = stylex.create({
       "@media (width <= 950px)": "0",
     },
     marginBottom: "5",
-    marginTop: "45px",
-    fontSize: "7rem",
+    marginTop: "65px",
+    fontSize: {
+      default: "7rem",
+      "@media (width < 500px)": "5rem",
+    },
   },
   aboutText: {
     color: colors.lightText,
     fontSize: "2.2rem",
     marginTop: "0px",
     marginBottom: "15px",
-    marginRight: "10%",
+    marginRight: "10vw",
     marginLeft: {
       default: "25%",
-      "@media (width <= 665px)": "10%",
+      "@media (width <= 665px)": "10vw",
     },
     maxWidth: "700px",
   },
