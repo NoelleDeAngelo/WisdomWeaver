@@ -1,6 +1,6 @@
 
 import * as stylex from "@stylexjs/stylex";
-import { colors,fonts } from "../tokens.stylex";
+import { colors, fonts, shadows } from "../tokens.stylex";
 import Image from "next/image";
 
 
@@ -13,12 +13,17 @@ const styles = stylex.create({
   sectionHeading: {
     fontFamily: fonts.subHeading,
     fontSize: {
-      default: "8rem",
-      "@media (width <= 550px)": "5rem",
+      default: "10rem",
+      "@media (width <= 550px)": "7rem",
     },
     letterSpacing: "2px",
     color: colors.darkHeading,
     alignSelf: "center",
+    marginTop: {
+      default: "150px",
+      "@media (width < 1125px)": "25px 0px",
+    },
+    marginBottom: "10px",
   },
   serviceContainer: {
     margin: "8% 5%",
@@ -41,6 +46,8 @@ const styles = stylex.create({
     maxWidth: "500px",
     minWidth: "320px",
     borderRadius: ".5%",
+    filter: shadows.sepia,
+    boxShadow: shadows.card,
   },
   textContainer: {
     maxWidth: "600px",
@@ -53,11 +60,12 @@ const styles = stylex.create({
     fontFamily: fonts.subHeading,
     letterSpacing: "1px",
     color: colors.darkSubheading,
-    fontSize: "3.5rem",
+    fontSize: "5.5rem",
   },
   serviceText: {
     color: colors.darkText,
     fontSize: "2.5rem",
+    letterSpacing: ".6px",
   },
 });
 

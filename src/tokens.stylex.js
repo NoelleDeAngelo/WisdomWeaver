@@ -53,4 +53,6 @@ export const fonts = stylex.defineVars({
 export const shadows = stylex.defineVars({
   light: "2px 1px 1px rgba(0, 0, 0, 0.08)",
   medium: "4px 2px 3px rgba(0, 0, 0, 0.18)",
+  card: " 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)",
+  sepia: "brightness(0.9) contrast(1.1) sepia(0.1)",
 });

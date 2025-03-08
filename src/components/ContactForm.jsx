@@ -1,6 +1,6 @@
 "use client";
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts } from "../tokens.stylex";
+import { colors, fonts,shadows } from "../tokens.stylex";
 import { useState } from "react";
 
 const fadeInAndOut = stylex.keyframes({
@@ -46,6 +46,7 @@ const styles = stylex.create({
     fontWeight: "300",
     letterSpacing: ".8px",
     background: "#fafafa",
+    boxShadow: shadows.card,
   },
   messageBox: {
     resize: "none",
@@ -53,6 +54,7 @@ const styles = stylex.create({
   sendButton: {
     border: "none",
     color: colors.heroText,
+    boxShadow: shadows.card,
     background: {
       default: colors.darkButton,
       ":hover": colors.darkButtonHighlight,
@@ -67,6 +69,10 @@ const styles = stylex.create({
     },
     fontWeight: "300",
     textAlign: "center",
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
   },
   thankYouNotShowing: {
     display: "none",

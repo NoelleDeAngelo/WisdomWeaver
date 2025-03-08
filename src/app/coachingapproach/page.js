@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts } from "../../tokens.stylex";
+import { colors, fonts, shadows } from "../../tokens.stylex";
 import Approach from "../../components/Approach.jsx";
 import Values from "../../components/Values.jsx";
 
@@ -18,6 +18,7 @@ const styles = stylex.create({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100%",
+    filter: shadows.sepia,
   },
   valuesSection: {
     padding: "75px 50px",
@@ -36,7 +37,7 @@ const styles = stylex.create({
       default: "7.5rem",
       "@media (width <= 490px)": "6rem",
     },
-    margin:"10px"
+    margin: "10px",
   },
   valuesContainer: {
     display: "flex",
@@ -48,7 +49,7 @@ const styles = stylex.create({
   valueContainer: {
     listStyleType: "none",
     maxWidth: "275px",
-    textAlign:"center",
+    textAlign: "center",
   },
   valueHeading: {
     fontFamily: fonts.subHeading,

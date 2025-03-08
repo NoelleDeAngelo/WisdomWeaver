@@ -39,6 +39,7 @@ const styles = stylex.create({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    filter: shadows.sepia,
   },
   heroHeader: {
     margin: "0",
@@ -75,6 +76,11 @@ const styles = stylex.create({
       "@media (width <= 750px)": "2.1rem",
     },
     fontWeight: "300",
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
+    boxShadow:shadows.card,
   },
 });
 

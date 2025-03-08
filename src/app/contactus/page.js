@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import Link from "next/link";
 import ContactForm from "../../components/ContactForm";
-import { colors, fonts } from "../../tokens.stylex";
+import { colors, fonts,shadows } from "../../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
@@ -38,6 +38,7 @@ const styles = stylex.create({
       "@media (width <= 390px)": "6rem",
     },
     fontFamily: fonts.subHeading,
+    textShadow: shadows.light,
   },
   text: {
     margin: "15px",
@@ -73,6 +74,11 @@ const styles = stylex.create({
     fontWeight: "300",
     textAlign: "center",
     maxWidth: "220px",
+    boxShadow:shadows.card,
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
   },
   sectionRight: {
     display: "flex",

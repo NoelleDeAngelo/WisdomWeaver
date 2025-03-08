@@ -1,8 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts } from "../tokens.stylex";
+import { colors, fonts,shadows } from "../tokens.stylex";
 
 const styles = stylex.create({
-
   Section: {
     padding: "50px 50px 100px",
     display: "flex",
@@ -17,9 +16,10 @@ const styles = stylex.create({
     letterSpacing: "2px",
     color: colors.darkHeading,
     fontSize: {
-      default: "7.5rem",
+      default: "10rem",
     },
-    margin: "10px",
+    margin: "50px",
+    textShadow: shadows.medium,
   },
   listContainer: {
     display: "flex",
@@ -33,19 +33,20 @@ const styles = stylex.create({
     listStyleType: "none",
     maxWidth: "275px",
     textAlign: "center",
-    margin:"5px",
+    margin: "5px",
   },
   valueHeading: {
     fontFamily: fonts.subHeading,
-    fontSize: "3.4rem",
-    fontWeight:"400",
+    fontSize: "3.9rem",
+    fontWeight: "400",
     letterSpacing: ".5px",
     color: colors.darkSubheading,
+    textShadow: shadows.medium,
   },
   valueText: {
     fontFamily: fonts.text,
     color: colors.darkText,
-    fontSize: "1.8rem",
+    fontSize: "2rem",
   },
 });
 

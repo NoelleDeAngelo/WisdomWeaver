@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts } from "../tokens.stylex";
+import { colors, fonts,shadows } from "../tokens.stylex";
 
 const styles = stylex.create({
 
@@ -15,6 +15,7 @@ const styles = stylex.create({
     fontFamily: fonts.subHeading,
     letterSpacing: "2px",
     color: colors.lightHeading,
+    textShadow: shadows.light,
     fontSize: {
       default: "7.5rem",
       "@media (width <= 490px)": "6rem",

@@ -47,11 +47,15 @@ const styles = stylex.create({
       backgroundColor: colors.darkButtonHighlight,
     },
     transition: "background-color .3s ease",
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
   },
   thankYou: {
     fontFamily: fonts.text,
     fontSize: "2rem",
-    color:colors.darkText,
+    color: colors.darkText,
   },
   showing: {
     display: "flex",

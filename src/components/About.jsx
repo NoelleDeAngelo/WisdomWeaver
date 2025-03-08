@@ -38,6 +38,7 @@ const styles = stylex.create({
   },
   aboutImage: {
     borderRadius: "50%",
+    filter: "brightness(0.9) contrast(1.15)",
     position: "relative",
     left: {
       default: "10vw",
@@ -92,6 +93,7 @@ const styles = stylex.create({
   aboutText: {
     color: colors.lightText,
     fontSize: "2.2rem",
+    letterSpacing: ".6px",
     marginTop: "0px",
     marginBottom: "15px",
     marginRight: "10vw",
