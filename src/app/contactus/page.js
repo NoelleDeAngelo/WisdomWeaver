@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import Link from "next/link";
 import ContactForm from "../../components/ContactForm";
-import { colors, fonts } from "../../tokens.stylex";
+import { colors, fonts,shadows } from "../../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = stylex.create({
@@ -34,17 +34,20 @@ const styles = stylex.create({
   heading: {
     color: colors.lightHeading,
     fontSize: {
-      default: "7rem",
-      "@media (width <= 390px)": "6rem",
+      default: "8rem",
+      "@media (width <= 450px)": "6rem",
     },
     fontFamily: fonts.subHeading,
+    textShadow: shadows.light,
+    marginBottom: "5px",
   },
   text: {
-    margin: "15px",
+    marginBottom: "10px",
+    marginLeft: "5px",
     fontFamily: fonts.text,
     fontSize: {
-      default: "1.7rem",
-      "@media (width <= 390px)": "1.6rem",
+      default: "2.1rem",
+      "@media (max-width: 450px)": "1.6rem",
     },
     color: colors.lightText,
   },
@@ -73,6 +76,11 @@ const styles = stylex.create({
     fontWeight: "300",
     textAlign: "center",
     maxWidth: "220px",
+    boxShadow: shadows.card,
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
   },
   sectionRight: {
     display: "flex",

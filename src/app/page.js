@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import Nav from "../components/Nav.jsx";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, spacing, fonts, shadows } from "../tokens.stylex";
 import Link from "next/link";
 import About from "../components/About.jsx";
 import Services from "../components/Services.jsx";
@@ -15,38 +15,48 @@ const styles = stylex.create({
     margin: 0,
     display: "flex ",
     flexDirection: "column",
-    position:"relative",
+    position: "relative",
     marginTop: "-70px",
   },
-  heroSection: {
-  },
+  heroSection: {},
   heroText: {
     display: "flex",
     color: colors.heroText,
     alignItems: "center",
     flexDirection: "column",
-    height: "80vh",
+    height: "75vh",
     minHeight: "275px",
     justifyContent: "center",
     padding: {
       default: "100px 10vw",
     },
+    justifySelf: "center",
     minWidth: "200px",
+    maxWidth: "1100px",
   },
   heroImage: {
     backgroundImage: "url('/images/sunsetman.jpg')",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    filter: shadows.sepia,
   },
   heroHeader: {
     margin: "0",
+    paddingTop: {
+      default: "150px",
+      "@media (900 < width <= 2000px)": "10px",
+      "@media (width <= 900px)": "10px",
+    },
     fontFamily: fonts.heading,
     fontWeight: "500",
     letterSpacing: ".6px",
+    lineHeight:1.3,
+    textShadow: shadows.medium,
     textAlign: "center",
     fontSize: {
-      default: "6rem",
+      default: "7.5rem",
+      "@media (865px< width <= 1200px)": "6rem",
       "@media (455px< width <= 865px)": "5rem",
       "@media (width <= 455px)": "4rem",
     },
@@ -67,6 +77,11 @@ const styles = stylex.create({
       "@media (width <= 750px)": "2.1rem",
     },
     fontWeight: "300",
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
+    boxShadow:shadows.card,
   },
 });
 

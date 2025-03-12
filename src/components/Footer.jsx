@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import {colors,spacing,fonts} from "../tokens.stylex";
+import {colors,spacing,fonts,shadows} from "../tokens.stylex";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import NewsletterForm from "./NewsletterForm.jsx"
 
@@ -8,7 +8,7 @@ const styles = stylex.create({
     display: "flex",
     flexDirection: {
       default: "row",
-      '@media (width < 800px)':"column",
+      '@media (width < 830px)':"column",
 
     },
     justifyContent: "space-between",
@@ -26,6 +26,7 @@ const styles = stylex.create({
   logo: {
     fontFamily: fonts.brand,
     letterSpacing: ".7px",
+    textShadow: shadows.medium,
     fontSize: {
       default: "3.4rem",
       "@media (980px < width <= 1200px )": "3rem",
@@ -36,6 +37,7 @@ const styles = stylex.create({
   tagline: {
     fontFamily: fonts.text,
     alignSelf: "center",
+    textShadow:shadows.medium,
     fontSize: {
       default: "2.3rem",
       "@media (980px < width <= 1200px )": "1.8rem",

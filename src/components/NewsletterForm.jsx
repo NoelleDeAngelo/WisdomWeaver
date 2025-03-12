@@ -1,6 +1,6 @@
 "use client";
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, spacing, fonts,shadows } from "../tokens.stylex";
 import { useState } from "react";
 
 const fadeIn = stylex.keyframes({
@@ -42,16 +42,21 @@ const styles = stylex.create({
     padding: "10px 20px",
     fontSize: "1.6rem",
     border: "none",
+    boxShadow:shadows.card,
     cursor: "pointer",
     ":hover": {
       backgroundColor: colors.darkButtonHighlight,
     },
     transition: "background-color .3s ease",
+    transform: {
+      default: null,
+      ":hover": "scale(0.98)",
+    },
   },
   thankYou: {
     fontFamily: fonts.text,
     fontSize: "2rem",
-    color:colors.darkText,
+    color: colors.darkText,
   },
   showing: {
     display: "flex",
