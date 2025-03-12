@@ -25,7 +25,7 @@ export const colors = stylex.defineVars({
   darkHeading: { default: "#f6f0e5" },
   darkSubheading: { default: "#eab5ac" },
   darkText: { default: "#f8f5f2" },
-  darkLink: { default: "#b26429" },
+  darkLink: { default: "#eab5ac" },
   darkLinkHighlight: { default: "#078080" },
   darkButton: { default: "#e2725b" },
   darkButtonHighlight: { default: "#e78774" },

@@ -1,7 +1,9 @@
 "use client";
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, fonts } from "../tokens.stylex";
+import { colors, spacing, fonts, shadows } from "../tokens.stylex";
+import { animations } from "../animations.stylex";
 import { TiThMenu } from "react-icons/ti";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -23,24 +25,36 @@ const styles = stylex.create({
     flexDirection: "column",
     position: "absolute",
     right: "30px",
+    top:"15px",
+    padding: "55px 0px",
+    background: colors.darkBackground,
+    boxShadow: shadows.card,
+    borderRadius: "2px",
+
+  },
+  closeIcon: {
+    fontSize: "3rem",
+    position: "absolute",
+    right: "5px",
+    top:"5px",
   },
   hamLink: {
-    alignItems: "center",
     textDecoration: "none",
-    padding: "12px",
-    fontFamily: fonts.Subheading,
-    fontSize: "2rem",
+    padding: "10px 30px",
+    fontFamily: fonts.text,
+    fontSize: "2.5rem",
+    textAlign: "center",
     color: {
-      default: colors.lightText,
+      default: colors.navText,
       ":hover": colors.navHighlight,
     },
-    backgroundColor: {
-      default: colors.background,
-    },
-    boxShadow: "0 2px 4px 0 rgba(0,0,0,.25)",
+    background: colors.darkBackground,
   },
   active: {
     display: "flex",
+    animationName: animations.fadeInLeft,
+    animationDuration: ".3s",
+    animationTimingFunction: "ease-out",
   },
   inactive: {
     display: "none",
@@ -70,6 +84,12 @@ export default function HamburgerMenu() {
           menuOpen ? styles.active : styles.inactive
         )}
       >
+        <IoCloseCircleOutline
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+          }}
+          {...stylex.props(styles.closeIcon)}
+        />
         <Link
           href="/"
           onClick={() => {
