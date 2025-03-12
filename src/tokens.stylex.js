@@ -12,7 +12,7 @@ export const colors = stylex.defineVars({
   heroText: { default: "#ffffff" },
   //Light Sections//
   lightBackground: { default: "#f6f0e5" },
-  whiteBackground: { default: "#ffffff" },
+  whiteBackground: { default: "#fefbfb" },
   lightHeading: { default: "#b26429" },
   lightSubheading: { default: "#dc967f" },
   lightText: { default: "#234649" },

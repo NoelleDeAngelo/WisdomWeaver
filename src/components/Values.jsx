@@ -3,7 +3,7 @@ import { colors, fonts,shadows } from "../tokens.stylex";
 
 const styles = stylex.create({
   Section: {
-    padding: "50px 50px 100px",
+    padding: "150px 50px 200px",
     display: "flex",
     flexDirection: "column",
     background: colors.darkBackground,
@@ -18,7 +18,7 @@ const styles = stylex.create({
     fontSize: {
       default: "10rem",
     },
-    margin: "50px",
+    margin: "5px",
     textShadow: shadows.medium,
   },
   listContainer: {

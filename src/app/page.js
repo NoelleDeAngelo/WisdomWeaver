@@ -51,6 +51,7 @@ const styles = stylex.create({
     fontFamily: fonts.heading,
     fontWeight: "500",
     letterSpacing: ".6px",
+    lineHeight:1.3,
     textShadow: shadows.medium,
     textAlign: "center",
     fontSize: {

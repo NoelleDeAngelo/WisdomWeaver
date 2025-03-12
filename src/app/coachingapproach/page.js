@@ -21,7 +21,7 @@ const styles = stylex.create({
     filter: shadows.sepia,
   },
   valuesSection: {
-    padding: "75px 50px",
+    padding: "50px",
     display: "flex",
     flexDirection: "column",
     background: colors.lightBackground,
@@ -37,7 +37,6 @@ const styles = stylex.create({
       default: "7.5rem",
       "@media (width <= 490px)": "6rem",
     },
-    margin: "10px",
   },
   valuesContainer: {
     display: "flex",
