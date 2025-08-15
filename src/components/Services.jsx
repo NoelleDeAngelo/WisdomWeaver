@@ -10,6 +10,7 @@ const styles = stylex.create({
     display: "flex",
     flexDirection: "column",
   },
+
   sectionHeading: {
     fontFamily: fonts.subHeading,
     fontSize: {
@@ -18,17 +19,27 @@ const styles = stylex.create({
     },
     letterSpacing: "2px",
     color: colors.darkHeading,
+    textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
     alignSelf: "center",
     marginTop: {
-      default: "150px",
+      default: "100px",
       "@media (width < 1125px)": "25px 0px",
     },
     marginBottom: "10px",
   },
   serviceContainer: {
-    margin: "8% 5%",
+    margin: "5% 5%",
+    padding: "2% 5%",
     display: "flex",
     flexDirection: "row",
+    maxWidth: "1200px",
+    borderRadius: "10px",
+    //background: colors.whiteBackground,
+    backgroundImage: "url('/images/ServiceBg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    boxShadow: shadows.cardOnDark,
     "@media (width <= 850px)": {
       flexDirection: "column",
     },
@@ -40,14 +51,26 @@ const styles = stylex.create({
       order: 1,
     },
   },
+  left: {
+    alignSelf: "flex-start",
+    "@media (width <= 1500px)": {
+      alignSelf: "center",
+    },
+  },
+  right: {
+    alignSelf: "flex-end",
+    "@media (width <= 1500px)": {
+      alignSelf: "center",
+    },
+  },
   photo: {
     width: "60%",
     height: "auto",
     maxWidth: "500px",
     minWidth: "320px",
-    borderRadius: ".5%",
+    borderRadius: "6px",
     filter: shadows.sepia,
-    boxShadow: shadows.card,
+    boxShadow: shadows.light,
   },
   textContainer: {
     maxWidth: "600px",
@@ -59,23 +82,33 @@ const styles = stylex.create({
   serviceHeading: {
     fontFamily: fonts.subHeading,
     letterSpacing: "1px",
-    color: colors.darkSubheading,
-    fontSize: "5.5rem",
+    color: colors.lightPink,
+    fontSize: {
+      default: "5.5rem",
+      "@media (width <= 550px)": "4rem",
+    },
+    textAlign: "center",
+    margin: "20px",
   },
   serviceText: {
-    color: colors.darkText,
-    fontSize: "2.5rem",
+    color: colors.lightText,
+    fontSize: {
+      default: "2.5rem",
+      "@media (width <= 550px)": "2rem",
+    },
     letterSpacing: ".6px",
+    textShadow: shadows.text,
   },
 });
 
 export default function Services() {
   return (
-    <div {...stylex.props(styles.ServicesSection)}>
-      <h2 {...stylex.props(styles.sectionHeading)}>Services</h2>
-      <div {...stylex.props(styles.serviceContainer)}>
-        <div {...stylex.props(styles.textContainer, styles.reverse)}>
-          <h3 {...stylex.props(styles.serviceHeading)}>One on One Coaching</h3>
+
+      <div {...stylex.props(styles.ServicesSection)}>
+        <h2 {...stylex.props(styles.sectionHeading)}>Services</h2>
+        <div {...stylex.props(styles.serviceContainer, styles.right)}>
+          <div {...stylex.props(styles.textContainer, styles.reverse)}>
+            <h3 {...stylex.props(styles.serviceHeading)}>One on One Coaching</h3>
           <p {...stylex.props(styles.serviceText)}>
             Experience the transformative power of coaching tailored
             specifically to your unique journey. Gain deeper insights, navigate
@@ -90,7 +123,7 @@ export default function Services() {
           alt="Image of an open notebook in front of a open laptop"
         />
       </div>
-      <div {...stylex.props(styles.serviceContainer)}>
+      <div {...stylex.props(styles.serviceContainer, styles.left)}>
         <Image
           {...stylex.props(styles.photo)}
           src="/images/Group.jpg"
@@ -107,7 +140,7 @@ export default function Services() {
           </p>
         </div>
       </div>
-      <div {...stylex.props(styles.serviceContainer)}>
+      <div {...stylex.props(styles.serviceContainer, styles.right)}>
         <div {...stylex.props(styles.textContainer, styles.reverse)}>
           <h3 {...stylex.props(styles.serviceHeading)}>Specialized Programs</h3>
           <p {...stylex.props(styles.serviceText)}>
@@ -122,10 +155,10 @@ export default function Services() {
           src="/images/Specialized.jpg"
           width={480}
           height={360}
-          alt="Image of small rocks stacked in a tower"
+          alt="Image of small rocks stacked into a tower"
         />
       </div>
-      <div {...stylex.props(styles.serviceContainer)}>
+      <div {...stylex.props(styles.serviceContainer, styles.left)}>
         <Image
           {...stylex.props(styles.photo)}
           src="/images/Corporate.jpg"
@@ -142,6 +175,6 @@ export default function Services() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
   );
 };

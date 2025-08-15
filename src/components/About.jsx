@@ -8,11 +8,16 @@ const styles = stylex.create({
     display: "flex",
     flexFlow: "row wrap",
     minHeight: "450px",
-    background: colors.lightBackground,
+    //background: colors.lightBackground,
+    backgroundImage: "url('/images/FounderBg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgrooundAttachment: "fixed",
   },
 
   sectionCard: {
-    background: colors.whiteBackground,
+    background: '#f9ede4',
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
@@ -26,13 +31,13 @@ const styles = stylex.create({
     boxShadow: shadows.card,
   },
 
-//-----Founder Section Styles-----//
+  //-----Founder Section Styles-----//
   founderSection: {
     padding: {
       default: "75px 5vw",
     },
     margin: {
-      default: "100px 0 50px 10vw",
+      default: "100px 2vw 50px 10vw",
       "@media (width <= 800px)": "50px 0",
     },
   },
@@ -51,6 +56,10 @@ const styles = stylex.create({
       default: null,
       "@media (width <= 950px)": "center",
     },
+    textAlign: {
+      default: "left",
+      "@media (width <= 950px)": "center",
+    },
   },
 
   //-----Soul Section Styles-----//
@@ -61,7 +70,7 @@ const styles = stylex.create({
       default: "75px 5vw",
     },
     margin: {
-      default: "100px 10vw 100px 0",
+      default: "100px 10vw 100px 2vw",
       "@media (width <= 800px)": "50px 0",
     },
   },
@@ -86,7 +95,7 @@ const styles = stylex.create({
     justifyContent: "space-evenly",
     alignItems: "stretch",
     width: "100%",
-    marginTop:"50px"
+    marginTop: "50px",
   },
 
   practicesCard: {
@@ -122,6 +131,7 @@ const styles = stylex.create({
     maxWidth: "90%",
     marginLeft: "auto",
     marginRight: "auto",
+    textShadow: shadows.text,
   },
 
   aboutImage: {
@@ -149,6 +159,10 @@ const styles = stylex.create({
       default: "7rem",
       "@media (width < 500px)": "5rem",
     },
+    textAlign: {
+      default: "left",
+      "@media (width <= 950px)": "center",
+    },
   },
 
   aboutText: {
@@ -158,6 +172,7 @@ const styles = stylex.create({
     marginTop: "0px",
     marginBottom: "15px",
     maxWidth: "900px",
+    textShadow: shadows.text,
   },
 });
 
@@ -166,13 +181,13 @@ export default function About() {
     <div {...stylex.props(styles.aboutSection)}>
       <section {...stylex.props(styles.founderSection, styles.sectionCard)}>
         <h2 {...stylex.props(styles.aboutHeading)}>Founder and Coach</h2>
-        <Image
-          {...stylex.props(styles.aboutImage)}
-          src="/images/Araceli.jpg"
-          width={800}
-          height={800}
-          alt="Image of the founder of Wisdom Weaver Coaching"
-        />
+          <Image
+            {...stylex.props(styles.aboutImage)}
+            src="/images/Araceli.jpg"
+            width={800}
+            height={800}
+            alt="Image of the founder of Wisdom Weaver Coaching"
+          />
         <div {...stylex.props(styles.founderTextContainer)}>
           <p {...stylex.props(styles.aboutText)}>
             Araceli López is a Transformational Life Coach and the visionary
