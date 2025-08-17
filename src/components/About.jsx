@@ -181,13 +181,13 @@ export default function About() {
     <div {...stylex.props(styles.aboutSection)}>
       <section {...stylex.props(styles.founderSection, styles.sectionCard)}>
         <h2 {...stylex.props(styles.aboutHeading)}>Founder and Coach</h2>
-          <Image
-            {...stylex.props(styles.aboutImage)}
-            src="/images/Araceli.jpg"
-            width={800}
-            height={800}
-            alt="Image of the founder of Wisdom Weaver Coaching"
-          />
+        <Image
+          {...stylex.props(styles.aboutImage)}
+          src="/images/Araceli.jpg"
+          width={800}
+          height={800}
+          alt="Image of the founder of Wisdom Weaver Coaching"
+        />
         <div {...stylex.props(styles.founderTextContainer)}>
           <p {...stylex.props(styles.aboutText)}>
             Araceli López is a Transformational Life Coach and the visionary
@@ -252,7 +252,7 @@ export default function About() {
             <p {...stylex.props(styles.aboutText)}>
               A gentle, body-based practice that supports emotional and
               spiritual healing through your body&apos;s innate wisdom and the
-              Divine's loving presence.
+              Divine&apos;s loving presence.
             </p>
           </div>
 
