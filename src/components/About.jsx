@@ -135,7 +135,7 @@ const styles = stylex.create({
   },
 
   aboutImage: {
-    borderRadius: "1%",
+    borderRadius: "50%",
     alignSelf: "center",
     justifySelf: "center",
     outline: "6px solid",
@@ -183,7 +183,7 @@ export default function About() {
         <h2 {...stylex.props(styles.aboutHeading)}>Founder and Coach</h2>
         <Image
           {...stylex.props(styles.aboutImage)}
-          src="/images/Araceli.jpg"
+          src="/images/Araceli.png"
           width={800}
           height={800}
           alt="Image of the founder of Wisdom Weaver Coaching"
